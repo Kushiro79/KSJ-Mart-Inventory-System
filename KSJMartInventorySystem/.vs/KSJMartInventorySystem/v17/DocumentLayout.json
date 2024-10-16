@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Project\\Vb.net Final Project\\KSJMartInventorySystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|c:\\project\\vb.net final project\\ksjmartinventorysystem\\ksjmartinventorysystem\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|c:\\project\\vb.net final project\\ksjmartinventorysystem\\ksjmartinventorysystem\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.vb",
+              "DocumentMoniker": "C:\\Project\\Vb.net Final Project\\KSJMartInventorySystem\\KSJMartInventorySystem\\Login.vb",
+              "RelativeDocumentMoniker": "KSJMartInventorySystem\\Login.vb",
+              "ToolTip": "C:\\Project\\Vb.net Final Project\\KSJMartInventorySystem\\KSJMartInventorySystem\\Login.vb",
+              "RelativeToolTip": "KSJMartInventorySystem\\Login.vb",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAuwGoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-16T08:27:13.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.vb [Design]",
+              "DocumentMoniker": "C:\\Project\\Vb.net Final Project\\KSJMartInventorySystem\\KSJMartInventorySystem\\Login.vb",
+              "RelativeDocumentMoniker": "KSJMartInventorySystem\\Login.vb",
+              "ToolTip": "C:\\Project\\Vb.net Final Project\\KSJMartInventorySystem\\KSJMartInventorySystem\\Login.vb [Design]",
+              "RelativeToolTip": "KSJMartInventorySystem\\Login.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-16T07:39:16.503Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\bin\Debug\KSJMartInventorySystem.exe.config
+C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\bin\Debug\KSJMartInventorySystem.exe
+C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\bin\Debug\KSJMartInventorySystem.pdb
+C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\bin\Debug\KSJMartInventorySystem.xml
+C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.vbproj.AssemblyReference.cache
+C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.Resources.resources
+C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.vbproj.GenerateResource.cache
+C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.vbproj.CoreCompileInputs.cache
+C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.exe
+C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.xml
+C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.pdb
+C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.Login.resources
