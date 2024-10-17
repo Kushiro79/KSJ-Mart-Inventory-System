@@ -10,3 +10,18 @@ C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\ob
 C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.xml
 C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.pdb
 C:\Project\Vb.net Final Project\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.Login.resources
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.vbproj.AssemblyReference.cache
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.Login.resources
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.Resources.resources
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.vbproj.GenerateResource.cache
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.vbproj.CoreCompileInputs.cache
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.AboutMart.resources
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.SplashScreen1.resources
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\bin\Debug\KSJ Mart Inventory Management System.exe.config
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\bin\Debug\KSJ Mart Inventory Management System.exe
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\bin\Debug\KSJ Mart Inventory Management System.pdb
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\bin\Debug\KSJ Mart Inventory Management System.xml
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJ Mart Inventory Management System.exe
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJ Mart Inventory Management System.xml
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJ Mart Inventory Management System.pdb
+C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.HomePage.resources

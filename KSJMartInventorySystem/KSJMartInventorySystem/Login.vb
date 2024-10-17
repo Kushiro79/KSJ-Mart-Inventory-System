@@ -5,14 +5,15 @@ Public Class Login
     Private Const CornerRadius As Integer = 40 ' Define a constant for corner radius
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
         roundCorners(Me)
         ' Set label properties
-        Label1.BorderStyle = BorderStyle.None ' Remove the default 
+
     End Sub
 
     Private Sub roundCorners(obj As Form)
         obj.FormBorderStyle = FormBorderStyle.None
-        obj.BackColor = Color.PaleGoldenrod
 
         DGP = New GraphicsPath()
         DGP.StartFigure()
@@ -49,7 +50,7 @@ Public Class Login
                                   Dim myPen As New Pen(Color.Maroon, 4)
 
                                   ' Set the smoothing mode to anti-alias the corners
-                                  g.SmoothingMode = SmoothingMode.HighQuality
+                                  g.SmoothingMode = SmoothingMode.AntiAlias
 
                                   ' Fill the background of the form
                                   g.FillRectangle(New SolidBrush(obj.BackColor), obj.ClientRectangle)
@@ -105,4 +106,9 @@ Public Class Login
         Me.Close()
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        HomePage.Show()
+
+    End Sub
 End Class

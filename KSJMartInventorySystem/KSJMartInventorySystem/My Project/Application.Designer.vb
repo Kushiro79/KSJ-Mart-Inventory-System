@@ -13,26 +13,38 @@ Option Explicit On
 
 
 Namespace My
-
+    
     'NOTE: This file is auto-generated; do not modify it directly.  To make changes,
     ' or if you encounter build errors in this file, go to the Project Designer
     ' (go to Project Properties or double-click the My Project node in
     ' Solution Explorer), and make changes on the Application tab.
     '
     Partial Friend Class MyApplication
-
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
+        
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Public Sub New()
             MyBase.New(Global.Microsoft.VisualBasic.ApplicationServices.AuthenticationMode.Windows)
             Me.IsSingleInstance = false
-            Me.EnableVisualStyles = true
+            Me.EnableVisualStyles = false
             Me.SaveMySettingsOnExit = true
             Me.ShutDownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses
         End Sub
 
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
         Protected Overrides Sub OnCreateMainForm()
+            System.Threading.Thread.Sleep(2000)
             Me.MainForm = Global.KSJMartInventorySystem.Login
         End Sub
+
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
+        Protected Overrides Sub OnCreateSplashScreen()
+            Me.SplashScreen = Global.KSJMartInventorySystem.SplashScreen1
+        End Sub
+
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
+        Protected Overrides Function OnInitialize(ByVal commandLineArgs As System.Collections.ObjectModel.ReadOnlyCollection(Of String)) As Boolean
+            Me.MinimumSplashScreenDisplayTime = 2000
+            Return MyBase.OnInitialize(commandLineArgs)
+        End Function
     End Class
 End Namespace
