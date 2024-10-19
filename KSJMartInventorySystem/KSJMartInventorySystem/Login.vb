@@ -1,4 +1,6 @@
 ﻿Imports System.Drawing.Drawing2D
+Imports System.Data.OleDb
+
 
 Public Class Login
     Private DGP As GraphicsPath
@@ -107,8 +109,40 @@ Public Class Login
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Hide()
-        HomePage.Show()
+        Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb")
+
+        Dim username As String = TextBox1.Text
+        Dim password As String = TextBox2.Text
+
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(*) FROM Staff WHERE username = @username AND password = @password"
+            Dim cmd As New OleDbCommand(query, conn)
+            cmd.Parameters.AddWithValue("@username", username)
+            cmd.Parameters.AddWithValue("@password", password)
+
+            Dim result As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+            If result > 0 Then
+                MessageBox.Show("Login Successfull")
+                HomePage.Show()
+                Me.Hide()
+
+            Else
+                MessageBox.Show("Invalid username or password")
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+
+
+            If conn IsNot Nothing AndAlso conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+
+        End Try
 
     End Sub
+
 End Class

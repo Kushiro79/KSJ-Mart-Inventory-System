@@ -29,22 +29,15 @@ Namespace My
             Me.SaveMySettingsOnExit = true
             Me.ShutDownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses
         End Sub
-
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
+        
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            System.Threading.Thread.Sleep(2000)
             Me.MainForm = Global.KSJMartInventorySystem.Login
         End Sub
-
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
+        
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateSplashScreen()
             Me.SplashScreen = Global.KSJMartInventorySystem.SplashScreen1
         End Sub
-
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
-        Protected Overrides Function OnInitialize(ByVal commandLineArgs As System.Collections.ObjectModel.ReadOnlyCollection(Of String)) As Boolean
-            Me.MinimumSplashScreenDisplayTime = 2000
-            Return MyBase.OnInitialize(commandLineArgs)
-        End Function
     End Class
 End Namespace

@@ -25,3 +25,17 @@ C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInvent
 C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJ Mart Inventory Management System.xml
 C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJ Mart Inventory Management System.pdb
 C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.HomePage.resources
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\bin\Debug\KSJ Mart Inventory Management System.exe.config
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJ Mart Inventory Management System.exe
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJ Mart Inventory Management System.xml
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJ Mart Inventory Management System.pdb
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.vbprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.AboutMart.resources
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.HomePage.resources
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.Login.resources
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.Resources.resources
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.SplashScreen1.resources
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\obj\Debug\KSJMartInventorySystem.vbproj.GenerateResource.Cache
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\bin\Debug\KSJ Mart Inventory Management System.exe
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\bin\Debug\KSJ Mart Inventory Management System.pdb
+C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\bin\Debug\KSJ Mart Inventory Management System.xml

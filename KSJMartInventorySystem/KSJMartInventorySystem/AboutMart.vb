@@ -16,10 +16,7 @@
         Me.LabelVersion.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
         Me.LabelCopyright.Text = My.Application.Info.Copyright
         Me.LabelCompanyName.Text = "UTM Sdn Bhd"
-        Me.TextBoxDescription.Text = "Description :The KSJ Mart Inventory Management System is designed to streamline and simplify inventory control for KSJ Mart. 
-Built to meet the specific needs of the owner and staff, the system helps efficiently track product quantities, monitor stock levels, and automate reordering processes.
-With user-friendly features, the system ensures accurate record-keeping, minimizes errors, and enhances the day-to-day management of the mart's inventory. Whether adding new items
-, updating stock, or reviewing reports, our inventory system empowers KSJ Mart to run smoothly and stay well-stocked."
+        Me.TextBoxDescription.Text = "Description :The KSJ Mart Inventory Management System is designed to streamline and simplify inventory control for KSJ Mart. Built to meet the specific needs of the owner and staff, the system helps efficiently track product quantities, monitor stock levels, and automate reordering processes. With user-friendly features, the system ensures accurate record-keeping, minimizes errors, and enhances the day-to-day management of the mart's inventory. Whether adding new items, updating stock, or reviewing reports, our inventory system empowers KSJ Mart to run smoothly and stay well-stocked."
     End Sub
 
     Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKButton.Click
