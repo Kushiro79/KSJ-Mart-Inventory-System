@@ -24,19 +24,19 @@ Partial Class HomePage
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomePage))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ManageStockButton = New System.Windows.Forms.Button()
+        Me.ManageProductsButton = New System.Windows.Forms.Button()
+        Me.ManageStockPicture = New System.Windows.Forms.PictureBox()
+        Me.ManageProductPicture = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ManageStockPicture, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ManageProductPicture, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -55,71 +55,71 @@ Partial Class HomePage
         Me.Label1.Text = "KSJ Mart Inventory Management System"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button1
+        'ManageStockButton
         '
-        Me.Button1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.ManageStockButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button1.BackColor = System.Drawing.Color.Honeydew
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Button1.Location = New System.Drawing.Point(84, 150)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 25)
-        Me.Button1.Size = New System.Drawing.Size(285, 172)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Manage Stock"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.ManageStockButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.ManageStockButton.BackColor = System.Drawing.Color.Honeydew
+        Me.ManageStockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ManageStockButton.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ManageStockButton.ForeColor = System.Drawing.Color.DarkGreen
+        Me.ManageStockButton.Location = New System.Drawing.Point(84, 150)
+        Me.ManageStockButton.Name = "ManageStockButton"
+        Me.ManageStockButton.Padding = New System.Windows.Forms.Padding(0, 0, 0, 25)
+        Me.ManageStockButton.Size = New System.Drawing.Size(285, 172)
+        Me.ManageStockButton.TabIndex = 1
+        Me.ManageStockButton.Text = "Manage Stock"
+        Me.ManageStockButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ManageStockButton.UseVisualStyleBackColor = False
         '
-        'Button2
+        'ManageProductsButton
         '
-        Me.Button2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.ManageProductsButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button2.BackColor = System.Drawing.Color.MistyRose
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.Maroon
-        Me.Button2.Location = New System.Drawing.Point(446, 150)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Padding = New System.Windows.Forms.Padding(0, 0, 0, 25)
-        Me.Button2.Size = New System.Drawing.Size(285, 172)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Manage Products"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.ManageProductsButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.ManageProductsButton.BackColor = System.Drawing.Color.MistyRose
+        Me.ManageProductsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ManageProductsButton.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ManageProductsButton.ForeColor = System.Drawing.Color.Maroon
+        Me.ManageProductsButton.Location = New System.Drawing.Point(446, 150)
+        Me.ManageProductsButton.Name = "ManageProductsButton"
+        Me.ManageProductsButton.Padding = New System.Windows.Forms.Padding(0, 0, 0, 25)
+        Me.ManageProductsButton.Size = New System.Drawing.Size(285, 172)
+        Me.ManageProductsButton.TabIndex = 2
+        Me.ManageProductsButton.Text = "Manage Products"
+        Me.ManageProductsButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ManageProductsButton.UseVisualStyleBackColor = False
         '
-        'PictureBox1
+        'ManageStockPicture
         '
-        Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.ManageStockPicture.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackColor = System.Drawing.Color.Honeydew
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(172, 179)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(106, 77)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
+        Me.ManageStockPicture.BackColor = System.Drawing.Color.Honeydew
+        Me.ManageStockPicture.Image = CType(resources.GetObject("ManageStockPicture.Image"), System.Drawing.Image)
+        Me.ManageStockPicture.Location = New System.Drawing.Point(172, 179)
+        Me.ManageStockPicture.Name = "ManageStockPicture"
+        Me.ManageStockPicture.Size = New System.Drawing.Size(106, 77)
+        Me.ManageStockPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ManageStockPicture.TabIndex = 3
+        Me.ManageStockPicture.TabStop = False
         '
-        'PictureBox2
+        'ManageProductPicture
         '
-        Me.PictureBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.ManageProductPicture.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.BackColor = System.Drawing.Color.MistyRose
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(538, 191)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(94, 65)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 4
-        Me.PictureBox2.TabStop = False
+        Me.ManageProductPicture.BackColor = System.Drawing.Color.MistyRose
+        Me.ManageProductPicture.Image = CType(resources.GetObject("ManageProductPicture.Image"), System.Drawing.Image)
+        Me.ManageProductPicture.Location = New System.Drawing.Point(538, 191)
+        Me.ManageProductPicture.Name = "ManageProductPicture"
+        Me.ManageProductPicture.Size = New System.Drawing.Size(94, 65)
+        Me.ManageProductPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ManageProductPicture.TabIndex = 4
+        Me.ManageProductPicture.TabStop = False
         '
         'PictureBox3
         '
@@ -164,15 +164,6 @@ Partial Class HomePage
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Contact Us"
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 38)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(165, 13)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Phone Number : +6012-333-4545"
-        '
         'LinkLabel1
         '
         Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.LightGray
@@ -186,6 +177,15 @@ Partial Class HomePage
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "About"
         Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.LightGray
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(3, 38)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(165, 13)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "Phone Number : +6012-333-4545"
         '
         'Label3
         '
@@ -218,17 +218,17 @@ Partial Class HomePage
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ManageProductPicture)
+        Me.Controls.Add(Me.ManageStockPicture)
+        Me.Controls.Add(Me.ManageProductsButton)
+        Me.Controls.Add(Me.ManageStockButton)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "HomePage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Home"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ManageStockPicture, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ManageProductPicture, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
@@ -237,10 +237,10 @@ Partial Class HomePage
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents ManageStockButton As Button
+    Friend WithEvents ManageProductsButton As Button
+    Friend WithEvents ManageStockPicture As PictureBox
+    Friend WithEvents ManageProductPicture As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label3 As Label
