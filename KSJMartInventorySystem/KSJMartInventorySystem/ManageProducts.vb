@@ -1,4 +1,11 @@
-﻿Public Class ManageProducts
+﻿Imports System.Data.OleDb
+
+Public Class ManageProducts
+    Private connectionString As String = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
+    Private adapter As OleDbDataAdapter
+    Private dt As New DataTable()
+
+
     Private Sub AddProductBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.AddProductBindingSource.EndEdit()
@@ -9,11 +16,32 @@
     Private Sub ManageProducts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'KSJMartInventorySystemDataSet.AddProduct' table. You can move, or remove it, as needed.
         Me.AddProductTableAdapter.Fill(Me.KSJMartInventorySystemDataSet.AddProduct)
+        LoadProducts()
 
     End Sub
 
+    Public Sub LoadProducts()
+        Try
+            Using connection As New OleDbConnection(connectionString)
+                Dim query As String = "SELECT * FROM AddProduct"
+                adapter = New OleDbDataAdapter(query, connection)
+                dt = New DataTable()
+                adapter.Fill(dt)
+                AddProductDataGridView.DataSource = dt
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading products :" & ex.Message)
+        End Try
+    End Sub
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dialog1.ShowDialog()
+        'Dialog1.ShowDialog()
+        'LoadProducts()
+        Dim addDialog As New Dialog1()
+        addDialog.DataGridViewReference = AddProductDataGridView ' Pass reference here
+        If addDialog.ShowDialog() = DialogResult.OK Then
+            LoadProducts() ' Refresh DataGridView in case new data was added
+        End If
 
     End Sub
 
@@ -28,4 +56,9 @@
         Login.Show()
 
     End Sub
+
+    Private Sub AddProductDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
 End Class
