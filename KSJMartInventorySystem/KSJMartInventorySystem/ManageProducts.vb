@@ -1,10 +1,9 @@
 ﻿Imports System.Data.OleDb
 
 Public Class ManageProducts
-    Private connectionString As String = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
+    Private connectionString As String = "Provider=Microsoft.Jet.OLEDB.12.0; Data Source=C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
     Private adapter As OleDbDataAdapter
     Private dt As New DataTable()
-
 
     Private Sub AddProductBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
@@ -35,8 +34,6 @@ Public Class ManageProducts
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        'Dialog1.ShowDialog()
-        'LoadProducts()
         Dim addDialog As New Dialog1()
         addDialog.DataGridViewReference = AddProductDataGridView ' Pass reference here
         If addDialog.ShowDialog() = DialogResult.OK Then
@@ -57,8 +54,11 @@ Public Class ManageProducts
 
     End Sub
 
-    Private Sub AddProductDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+  
+
+   
+    
+    Private Sub AddProductDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles AddProductDataGridView.CellContentClick
 
     End Sub
-
 End Class

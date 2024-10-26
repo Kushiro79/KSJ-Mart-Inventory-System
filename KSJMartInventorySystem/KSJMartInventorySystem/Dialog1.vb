@@ -2,22 +2,31 @@
 Imports System.Data.OleDb
 Public Class Dialog1
     Public Property DataGridViewReference As DataGridView
-    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.4.0;Data Source=C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
+    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
         If SaveProducts() Then
             MessageBox.Show("Product added successfully.")
-            LoadProducts()
+            ' Refreshing the DataGridViews in ManageProducts and ManageStock forms
+            Dim manageProductsForm As ManageProducts = DirectCast(Application.OpenForms("ManageProducts"), ManageProducts)
+            Dim manageStockForm As ManageStock = DirectCast(Application.OpenForms("ManageStock"), ManageStock)
+            If manageProductsForm IsNot Nothing Then
+                manageProductsForm.LoadProducts() ' Refresh AddProductDataGridView
+            Else
+                MessageBox.Show("ManageProducts form not found.")
+            End If
+
+            If manageStockForm IsNot Nothing Then
+                manageStockForm.RefreshOrderProductDataGridView() ' Refresh OrderProductDataGridView
+            Else
+                MessageBox.Show("ManageStock form not found.")
+            End If
+
             Me.DialogResult = System.Windows.Forms.DialogResult.OK
             Me.Close()
-
         Else
             MessageBox.Show("Failed to add product.")
         End If
-
-
-        Me.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.Close()
     End Sub
 
     Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click
@@ -45,16 +54,23 @@ Public Class Dialog1
                     command.Parameters.AddWithValue("@Brand", BrandTextBox.Text)
 
                     command.ExecuteNonQuery()
-
                 End Using
+
+                Dim queryOrderProduct As String = "INSERT INTO OrderProduct (SKU, ProductName) VALUES (?, ?)"
+                Using command As New OleDbCommand(queryOrderProduct, connection)
+                    command.Parameters.AddWithValue("@SKU", SKUTextBox.Text)
+                    command.Parameters.AddWithValue("@ProductName", ProductNameTextBox.Text)
+                    command.ExecuteNonQuery()
+                End Using
+
+                Return True
             End Using
-            Return True
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
             Return False
-
-        End Try 
+        End Try
     End Function
+
 
     Private Sub LoadProducts()
 
@@ -71,5 +87,5 @@ Public Class Dialog1
         End Using
 
     End Sub
-   
+
 End Class

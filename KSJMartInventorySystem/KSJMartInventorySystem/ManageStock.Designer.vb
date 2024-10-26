@@ -51,9 +51,10 @@ Partial Class ManageStock
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Leelawadee UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Maroon
-        Me.Label1.Location = New System.Drawing.Point(12, 54)
+        Me.Label1.Location = New System.Drawing.Point(16, 66)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(161, 30)
+        Me.Label1.Size = New System.Drawing.Size(210, 37)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Stock Manager"
         '
@@ -89,8 +90,9 @@ Partial Class ManageStock
         Me.Label2.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Maroon
         Me.Label2.Location = New System.Drawing.Point(0, 0)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(816, 50)
+        Me.Label2.Size = New System.Drawing.Size(1088, 61)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "KSJ Mart Inventory Management System"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -101,9 +103,10 @@ Partial Class ManageStock
         Me.PictureBox3.BackColor = System.Drawing.Color.Orange
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(779, 12)
+        Me.PictureBox3.Location = New System.Drawing.Point(1039, 15)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(25, 30)
+        Me.PictureBox3.Size = New System.Drawing.Size(33, 37)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 6
         Me.PictureBox3.TabStop = False
@@ -112,9 +115,10 @@ Partial Class ManageStock
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Orange
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox2.Location = New System.Drawing.Point(16, 15)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(25, 30)
+        Me.PictureBox2.Size = New System.Drawing.Size(33, 37)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 14
         Me.PictureBox2.TabStop = False
@@ -126,9 +130,10 @@ Partial Class ManageStock
         Me.OrderProductDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.OrderProductDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.OrderProductDataGridView.DataSource = Me.OrderProductBindingSource
-        Me.OrderProductDataGridView.Location = New System.Drawing.Point(17, 87)
+        Me.OrderProductDataGridView.Location = New System.Drawing.Point(23, 107)
+        Me.OrderProductDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.OrderProductDataGridView.Name = "OrderProductDataGridView"
-        Me.OrderProductDataGridView.Size = New System.Drawing.Size(787, 351)
+        Me.OrderProductDataGridView.Size = New System.Drawing.Size(1049, 432)
         Me.OrderProductDataGridView.TabIndex = 14
         '
         'DataGridViewTextBoxColumn1
@@ -169,15 +174,16 @@ Partial Class ManageStock
         '
         'ManageStock
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Wheat
-        Me.ClientSize = New System.Drawing.Size(816, 450)
+        Me.ClientSize = New System.Drawing.Size(1088, 554)
         Me.Controls.Add(Me.OrderProductDataGridView)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ManageStock"
         Me.Text = "ManageStock"
         CType(Me.KSJMartInventorySystemDataSet, System.ComponentModel.ISupportInitialize).EndInit()
