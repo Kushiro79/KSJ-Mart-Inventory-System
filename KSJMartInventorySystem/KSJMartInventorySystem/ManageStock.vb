@@ -2,7 +2,7 @@
 Imports System.Data.OleDb
 Imports KSJMartInventorySystem.KSJMartInventorySystemDataSetTableAdapters
 Public Class ManageStock
-    Private connectionString As String = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
+    Private connectionString As String = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
     Private adapter As OleDbDataAdapter
     Private dt As New DataTable()
     Dim command As String
@@ -38,57 +38,71 @@ Public Class ManageStock
     End Sub
 
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
+        If String.IsNullOrWhiteSpace(ProductNameTextBox.Text) Or
+        String.IsNullOrWhiteSpace(MinQuantityTextBox.Text) Or
+        String.IsNullOrWhiteSpace(QuantityTextBox.Text) Or
+        String.IsNullOrWhiteSpace(StatusTextBox.Text) Or
+        String.IsNullOrWhiteSpace(SKUTextBox.Text) Then
+
+            MessageBox.Show("Please fill all fields.")
+            Return
+        End If
+
+        ' Call the UpdateQuery method with parameters to update Access database
+        Dim rowsAffected As Integer = UpdateQuery(
+            ProductNameTextBox.Text,
+            Convert.ToInt32(MinQuantityTextBox.Text),
+            Convert.ToInt32(QuantityTextBox.Text),
+            ArrivalDateDateTimePicker.Value,
+            StatusTextBox.Text,
+            SKUTextBox.Text
+        )
+
+        ' Confirm that rows were updated in the Access database
+        If rowsAffected > 0 Then
+            MessageBox.Show("Update Successful")
+            ' Reload data to show the update in DataGrid
+            Me.OrderProductTableAdapter.Fill(Me.KSJMartInventorySystemDataSet.OrderProduct)
+        Else
+            MessageBox.Show("No records updated.")
+        End If
+    End Sub
+
+    Public Function UpdateQuery(
+      ProductName As String,
+     MinQuantity As Integer,
+     Quantity As Integer,
+     ArrivalDate As Date,
+     Status As String,
+     SKU As String) As Integer
+
+        Dim rowsAffected As Integer = 0  ' Declare rowsAffected
+
+        Dim sqlCommand As String = "UPDATE OrderProduct " &
+                                   "SET ProductName = ?, MinQuantity = ?, Quantity = ?, ArrivalDate = ?, Status = ? " &
+                                   "WHERE SKU = ?"
+
         Try
-            ' Call the UpdateQuery method with parameters
-            Dim rowsAffected As Integer = OrderProductTableAdapter.UpdateQuery(
-                ProductNameTextBox.Text,
-                Convert.ToInt32(MinQuantityTextBox.Text), ' Ensure this is the correct type
-                Convert.ToInt32(QuantityTextBox.Text), ' Ensure this is the correct type
-                ArrivalDateDateTimePicker.Value,
-                StatusTextBox.Text,
-                SKUTextBox.Text
-            )
+            Using connection As New OleDbConnection(connectionString)
+                connection.Open()
 
-            If rowsAffected > 0 Then
-                MessageBox.Show("Update Successful")
-            Else
-                MessageBox.Show("No records updated.")
-            End If
+                Using command As New OleDbCommand(sqlCommand, connection)
+                    command.Parameters.AddWithValue("@ProductName", ProductName)
+                    command.Parameters.AddWithValue("@MinQuantity", MinQuantity)
+                    command.Parameters.AddWithValue("@Quantity", Quantity)
+                    command.Parameters.AddWithValue("@ArrivalDate", ArrivalDate)
+                    command.Parameters.AddWithValue("@Status", Status)
+                    command.Parameters.AddWithValue("@SKU", SKU)
 
+                    rowsAffected = command.ExecuteNonQuery()
+                End Using
+            End Using
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
-    End Sub
+
+        Return rowsAffected  ' Return the affected rows count
+    End Function
 
 
-
-
-
-
-
-
-    '  Private Sub OrderProductDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles OrderProductDataGridView.CellContentClick
-    '     If e.RowIndex >= 0 Then
-    ' Get the SKU and ProductName from the selected row in OrderProductDataGridView
-    'Dim selectedSKU As String = OrderProductDataGridView.Rows(e.RowIndex).Cells("SKU").Value.ToString()
-    'Dim selectedProductName As String = OrderProductDataGridView.Rows(e.RowIndex).Cells("ProductName").Value.ToString()
-
-    '       MessageBox.Show("Selected SKU: " & selectedSKU & vbCrLf & "Selected Product Name: " & selectedProductName)
-
-    ' Access ManageProducts form to retrieve the AddProductDataGridView
-    'Dim manageProductsForm As ManageProducts = DirectCast(Application.OpenForms("ManageProducts"), ManageProducts)
-    '       If manageProductsForm IsNot Nothing Then
-    ' Check for matching SKU in AddProductDataGridView
-    '         For Each row As DataGridViewRow In manageProductsForm.AddProductDataGridView.Rows
-    '              If row.Cells("SKU").Value.ToString() = selectedSKU Then
-    'Dim productName As String = row.Cells("ProductName").Value.ToString()
-    '                   MessageBox.Show("Matching Product Name from AddProductDataGridView: " & productName)
-    '                  Exit For
-    '             End If
-    '        Next
-    '   Else
-    '     MessageBox.Show("ManageProducts form not found.")
-    '  End If
-    'End If
-    'End Sub
 End Class

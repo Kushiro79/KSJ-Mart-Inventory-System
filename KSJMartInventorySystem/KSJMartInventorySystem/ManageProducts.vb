@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 
 Public Class ManageProducts
-    Private connectionString As String = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
+    Private connectionString As String = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
     Private adapter As OleDbDataAdapter
     Private dt As New DataTable()
 

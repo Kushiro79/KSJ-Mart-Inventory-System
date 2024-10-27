@@ -2,7 +2,7 @@
 Imports System.Data.OleDb
 Public Class Dialog1
     Public Property DataGridViewReference As DataGridView
-    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
+    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
         If SaveProducts() Then
