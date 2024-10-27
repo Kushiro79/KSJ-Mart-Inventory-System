@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 
 Public Class ManageProducts
-    Private connectionString As String = "Provider=Microsoft.Jet.OLEDB.12.0; Data Source=C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
+    Private connectionString As String = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
     Private adapter As OleDbDataAdapter
     Private dt As New DataTable()
 
@@ -13,6 +13,10 @@ Public Class ManageProducts
     End Sub
 
     Private Sub ManageProducts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'KSJMartInventorySystemDataSet.OrderProduct' table. You can move, or remove it, as needed.
+        Me.OrderProductTableAdapter.Fill(Me.KSJMartInventorySystemDataSet.OrderProduct)
+        'TODO: This line of code loads data into the 'KSJMartInventorySystemDataSet.OrderProduct' table. You can move, or remove it, as needed.
+        Me.OrderProductTableAdapter.Fill(Me.KSJMartInventorySystemDataSet.OrderProduct)
         'TODO: This line of code loads data into the 'KSJMartInventorySystemDataSet.AddProduct' table. You can move, or remove it, as needed.
         Me.AddProductTableAdapter.Fill(Me.KSJMartInventorySystemDataSet.AddProduct)
         LoadProducts()
@@ -54,11 +58,5 @@ Public Class ManageProducts
 
     End Sub
 
-  
 
-   
-    
-    Private Sub AddProductDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles AddProductDataGridView.CellContentClick
-
-    End Sub
 End Class

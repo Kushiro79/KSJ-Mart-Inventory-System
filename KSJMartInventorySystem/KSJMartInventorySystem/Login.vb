@@ -109,7 +109,7 @@ Public Class Login
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb")
+        Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb")
 
         Dim username As String = TextBox1.Text
         Dim password As String = TextBox2.Text

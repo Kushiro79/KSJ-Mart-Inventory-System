@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ManageStock
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,16 @@ Partial Class ManageStock
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ManageStock))
+        Dim SKULabel As System.Windows.Forms.Label
+        Dim ProductNameLabel As System.Windows.Forms.Label
+        Dim MinQuantityLabel As System.Windows.Forms.Label
+        Dim QuantityLabel As System.Windows.Forms.Label
+        Dim ArrivalDateLabel As System.Windows.Forms.Label
+        Dim StatusLabel As System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label()
         Me.KSJMartInventorySystemDataSet = New KSJMartInventorySystem.KSJMartInventorySystemDataSet()
         Me.OrderProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -32,6 +38,11 @@ Partial Class ManageStock
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.NextButton = New System.Windows.Forms.Button()
+        Me.PreviousButton = New System.Windows.Forms.Button()
+        Me.SaveButton = New System.Windows.Forms.Button()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.OrderProductBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OrderProductDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,10 +50,23 @@ Partial Class ManageStock
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SKUTextBox = New System.Windows.Forms.TextBox()
+        Me.ProductNameTextBox = New System.Windows.Forms.TextBox()
+        Me.MinQuantityTextBox = New System.Windows.Forms.TextBox()
+        Me.QuantityTextBox = New System.Windows.Forms.TextBox()
+        Me.ArrivalDateDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.StatusTextBox = New System.Windows.Forms.TextBox()
+        SKULabel = New System.Windows.Forms.Label()
+        ProductNameLabel = New System.Windows.Forms.Label()
+        MinQuantityLabel = New System.Windows.Forms.Label()
+        QuantityLabel = New System.Windows.Forms.Label()
+        ArrivalDateLabel = New System.Windows.Forms.Label()
+        StatusLabel = New System.Windows.Forms.Label()
         CType(Me.KSJMartInventorySystemDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OrderProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OrderProductBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OrderProductDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,10 +75,9 @@ Partial Class ManageStock
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Leelawadee UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Maroon
-        Me.Label1.Location = New System.Drawing.Point(16, 66)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(12, 54)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(210, 37)
+        Me.Label1.Size = New System.Drawing.Size(161, 30)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Stock Manager"
         '
@@ -90,9 +113,8 @@ Partial Class ManageStock
         Me.Label2.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Maroon
         Me.Label2.Location = New System.Drawing.Point(0, 0)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(1088, 61)
+        Me.Label2.Size = New System.Drawing.Size(1094, 50)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "KSJ Mart Inventory Management System"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -103,10 +125,9 @@ Partial Class ManageStock
         Me.PictureBox3.BackColor = System.Drawing.Color.Orange
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(1039, 15)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox3.Location = New System.Drawing.Point(1057, 12)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(33, 37)
+        Me.PictureBox3.Size = New System.Drawing.Size(25, 30)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 6
         Me.PictureBox3.TabStop = False
@@ -115,26 +136,72 @@ Partial Class ManageStock
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Orange
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(16, 15)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(33, 37)
+        Me.PictureBox2.Size = New System.Drawing.Size(25, 30)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 14
         Me.PictureBox2.TabStop = False
         '
+        'NextButton
+        '
+        Me.NextButton.BackColor = System.Drawing.Color.Orange
+        Me.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NextButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NextButton.ForeColor = System.Drawing.Color.Maroon
+        Me.NextButton.Location = New System.Drawing.Point(838, 273)
+        Me.NextButton.Name = "NextButton"
+        Me.NextButton.Size = New System.Drawing.Size(75, 23)
+        Me.NextButton.TabIndex = 27
+        Me.NextButton.Text = "Next"
+        Me.NextButton.UseVisualStyleBackColor = False
+        '
+        'PreviousButton
+        '
+        Me.PreviousButton.BackColor = System.Drawing.Color.Orange
+        Me.PreviousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PreviousButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PreviousButton.ForeColor = System.Drawing.Color.Maroon
+        Me.PreviousButton.Location = New System.Drawing.Point(757, 273)
+        Me.PreviousButton.Name = "PreviousButton"
+        Me.PreviousButton.Size = New System.Drawing.Size(75, 23)
+        Me.PreviousButton.TabIndex = 28
+        Me.PreviousButton.Text = "Previous"
+        Me.PreviousButton.UseVisualStyleBackColor = False
+        '
+        'SaveButton
+        '
+        Me.SaveButton.BackColor = System.Drawing.Color.Orange
+        Me.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SaveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SaveButton.ForeColor = System.Drawing.Color.Maroon
+        Me.SaveButton.Location = New System.Drawing.Point(919, 273)
+        Me.SaveButton.Name = "SaveButton"
+        Me.SaveButton.Size = New System.Drawing.Size(75, 23)
+        Me.SaveButton.TabIndex = 29
+        Me.SaveButton.Text = "Save"
+        Me.SaveButton.UseVisualStyleBackColor = False
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
+        'OrderProductBindingSource1
+        '
+        Me.OrderProductBindingSource1.DataMember = "OrderProduct"
+        Me.OrderProductBindingSource1.DataSource = Me.KSJMartInventorySystemDataSet
+        '
         'OrderProductDataGridView
         '
         Me.OrderProductDataGridView.AutoGenerateColumns = False
-        Me.OrderProductDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.OrderProductDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.OrderProductDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.OrderProductDataGridView.DataSource = Me.OrderProductBindingSource
-        Me.OrderProductDataGridView.Location = New System.Drawing.Point(23, 107)
-        Me.OrderProductDataGridView.Margin = New System.Windows.Forms.Padding(4)
+        Me.OrderProductDataGridView.Location = New System.Drawing.Point(12, 87)
         Me.OrderProductDataGridView.Name = "OrderProductDataGridView"
-        Me.OrderProductDataGridView.Size = New System.Drawing.Size(1049, 432)
-        Me.OrderProductDataGridView.TabIndex = 14
+        Me.OrderProductDataGridView.Size = New System.Drawing.Size(638, 403)
+        Me.OrderProductDataGridView.TabIndex = 41
         '
         'DataGridViewTextBoxColumn1
         '
@@ -150,8 +217,8 @@ Partial Class ManageStock
         '
         'DataGridViewTextBoxColumn3
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Min Quantity"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Min Quantity"
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "MinQuantity"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "MinQuantity"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
         'DataGridViewTextBoxColumn4
@@ -172,24 +239,142 @@ Partial Class ManageStock
         Me.DataGridViewTextBoxColumn6.HeaderText = "Status"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
+        'SKULabel
+        '
+        SKULabel.AutoSize = True
+        SKULabel.Location = New System.Drawing.Point(711, 95)
+        SKULabel.Name = "SKULabel"
+        SKULabel.Size = New System.Drawing.Size(32, 13)
+        SKULabel.TabIndex = 41
+        SKULabel.Text = "SKU:"
+        '
+        'SKUTextBox
+        '
+        Me.SKUTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrderProductBindingSource, "SKU", True))
+        Me.SKUTextBox.Location = New System.Drawing.Point(795, 92)
+        Me.SKUTextBox.Name = "SKUTextBox"
+        Me.SKUTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.SKUTextBox.TabIndex = 42
+        '
+        'ProductNameLabel
+        '
+        ProductNameLabel.AutoSize = True
+        ProductNameLabel.Location = New System.Drawing.Point(711, 121)
+        ProductNameLabel.Name = "ProductNameLabel"
+        ProductNameLabel.Size = New System.Drawing.Size(78, 13)
+        ProductNameLabel.TabIndex = 43
+        ProductNameLabel.Text = "Product Name:"
+        '
+        'ProductNameTextBox
+        '
+        Me.ProductNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrderProductBindingSource, "ProductName", True))
+        Me.ProductNameTextBox.Location = New System.Drawing.Point(795, 118)
+        Me.ProductNameTextBox.Name = "ProductNameTextBox"
+        Me.ProductNameTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.ProductNameTextBox.TabIndex = 44
+        '
+        'MinQuantityLabel
+        '
+        MinQuantityLabel.AutoSize = True
+        MinQuantityLabel.Location = New System.Drawing.Point(711, 147)
+        MinQuantityLabel.Name = "MinQuantityLabel"
+        MinQuantityLabel.Size = New System.Drawing.Size(69, 13)
+        MinQuantityLabel.TabIndex = 45
+        MinQuantityLabel.Text = "Min Quantity:"
+        '
+        'MinQuantityTextBox
+        '
+        Me.MinQuantityTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrderProductBindingSource, "MinQuantity", True))
+        Me.MinQuantityTextBox.Location = New System.Drawing.Point(795, 144)
+        Me.MinQuantityTextBox.Name = "MinQuantityTextBox"
+        Me.MinQuantityTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.MinQuantityTextBox.TabIndex = 46
+        '
+        'QuantityLabel
+        '
+        QuantityLabel.AutoSize = True
+        QuantityLabel.Location = New System.Drawing.Point(711, 173)
+        QuantityLabel.Name = "QuantityLabel"
+        QuantityLabel.Size = New System.Drawing.Size(49, 13)
+        QuantityLabel.TabIndex = 47
+        QuantityLabel.Text = "Quantity:"
+        '
+        'QuantityTextBox
+        '
+        Me.QuantityTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrderProductBindingSource, "Quantity", True))
+        Me.QuantityTextBox.Location = New System.Drawing.Point(795, 170)
+        Me.QuantityTextBox.Name = "QuantityTextBox"
+        Me.QuantityTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.QuantityTextBox.TabIndex = 48
+        '
+        'ArrivalDateLabel
+        '
+        ArrivalDateLabel.AutoSize = True
+        ArrivalDateLabel.Location = New System.Drawing.Point(711, 200)
+        ArrivalDateLabel.Name = "ArrivalDateLabel"
+        ArrivalDateLabel.Size = New System.Drawing.Size(65, 13)
+        ArrivalDateLabel.TabIndex = 49
+        ArrivalDateLabel.Text = "Arrival Date:"
+        '
+        'ArrivalDateDateTimePicker
+        '
+        Me.ArrivalDateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.OrderProductBindingSource, "ArrivalDate", True))
+        Me.ArrivalDateDateTimePicker.Location = New System.Drawing.Point(795, 196)
+        Me.ArrivalDateDateTimePicker.Name = "ArrivalDateDateTimePicker"
+        Me.ArrivalDateDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.ArrivalDateDateTimePicker.TabIndex = 50
+        '
+        'StatusLabel
+        '
+        StatusLabel.AutoSize = True
+        StatusLabel.Location = New System.Drawing.Point(711, 225)
+        StatusLabel.Name = "StatusLabel"
+        StatusLabel.Size = New System.Drawing.Size(40, 13)
+        StatusLabel.TabIndex = 51
+        StatusLabel.Text = "Status:"
+        '
+        'StatusTextBox
+        '
+        Me.StatusTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrderProductBindingSource, "Status", True))
+        Me.StatusTextBox.Location = New System.Drawing.Point(795, 222)
+        Me.StatusTextBox.Name = "StatusTextBox"
+        Me.StatusTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.StatusTextBox.TabIndex = 52
+        '
         'ManageStock
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Wheat
-        Me.ClientSize = New System.Drawing.Size(1088, 554)
+        Me.ClientSize = New System.Drawing.Size(1094, 541)
+        Me.Controls.Add(SKULabel)
+        Me.Controls.Add(Me.SKUTextBox)
+        Me.Controls.Add(ProductNameLabel)
+        Me.Controls.Add(Me.ProductNameTextBox)
+        Me.Controls.Add(MinQuantityLabel)
+        Me.Controls.Add(Me.MinQuantityTextBox)
+        Me.Controls.Add(QuantityLabel)
+        Me.Controls.Add(Me.QuantityTextBox)
+        Me.Controls.Add(ArrivalDateLabel)
+        Me.Controls.Add(Me.ArrivalDateDateTimePicker)
+        Me.Controls.Add(StatusLabel)
+        Me.Controls.Add(Me.StatusTextBox)
         Me.Controls.Add(Me.OrderProductDataGridView)
+        Me.Controls.Add(Me.SaveButton)
+        Me.Controls.Add(Me.PreviousButton)
+        Me.Controls.Add(Me.NextButton)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ManageStock"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ManageStock"
         CType(Me.KSJMartInventorySystemDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OrderProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OrderProductBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OrderProductDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -204,6 +389,11 @@ Partial Class ManageStock
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents NextButton As Button
+    Friend WithEvents PreviousButton As Button
+    Friend WithEvents SaveButton As Button
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents OrderProductBindingSource1 As BindingSource
     Friend WithEvents OrderProductDataGridView As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
@@ -211,4 +401,10 @@ Partial Class ManageStock
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents SKUTextBox As TextBox
+    Friend WithEvents ProductNameTextBox As TextBox
+    Friend WithEvents MinQuantityTextBox As TextBox
+    Friend WithEvents QuantityTextBox As TextBox
+    Friend WithEvents ArrivalDateDateTimePicker As DateTimePicker
+    Friend WithEvents StatusTextBox As TextBox
 End Class

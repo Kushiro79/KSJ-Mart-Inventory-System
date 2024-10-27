@@ -33,6 +33,8 @@ Partial Public Class KSJMartInventorySystemDataSet
     
     Private tableSupplier As SupplierDataTable
     
+    Private relationAddProductOrderProduct As Global.System.Data.DataRelation
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -266,6 +268,7 @@ Partial Public Class KSJMartInventorySystemDataSet
                 Me.tableSupplier.InitVars
             End If
         End If
+        Me.relationAddProductOrderProduct = Me.Relations("AddProductOrderProduct")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -284,6 +287,8 @@ Partial Public Class KSJMartInventorySystemDataSet
         MyBase.Tables.Add(Me.tableStaff)
         Me.tableSupplier = New SupplierDataTable()
         MyBase.Tables.Add(Me.tableSupplier)
+        Me.relationAddProductOrderProduct = New Global.System.Data.DataRelation("AddProductOrderProduct", New Global.System.Data.DataColumn() {Me.tableAddProduct.SKUColumn}, New Global.System.Data.DataColumn() {Me.tableOrderProduct.SKUColumn}, false)
+        Me.Relations.Add(Me.relationAddProductOrderProduct)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -709,7 +714,7 @@ Partial Public Class KSJMartInventorySystemDataSet
         
         Private columnProductName As Global.System.Data.DataColumn
         
-        Private columnMin_Quantity As Global.System.Data.DataColumn
+        Private columnMinQuantity As Global.System.Data.DataColumn
         
         Private columnQuantity As Global.System.Data.DataColumn
         
@@ -770,9 +775,9 @@ Partial Public Class KSJMartInventorySystemDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property Min_QuantityColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property MinQuantityColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnMin_Quantity
+                Return Me.columnMinQuantity
             End Get
         End Property
         
@@ -837,9 +842,12 @@ Partial Public Class KSJMartInventorySystemDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddOrderProductRow(ByVal SKU As Integer, ByVal ProductName As String, ByVal Min_Quantity As Integer, ByVal Quantity As Integer, ByVal ArrivalDate As Date, ByVal Status As String) As OrderProductRow
+        Public Overloads Function AddOrderProductRow(ByVal parentAddProductRowByAddProductOrderProduct As AddProductRow, ByVal ProductName As String, ByVal MinQuantity As Integer, ByVal Quantity As Integer, ByVal ArrivalDate As Date, ByVal Status As String) As OrderProductRow
             Dim rowOrderProductRow As OrderProductRow = CType(Me.NewRow,OrderProductRow)
-            Dim columnValuesArray() As Object = New Object() {SKU, ProductName, Min_Quantity, Quantity, ArrivalDate, Status}
+            Dim columnValuesArray() As Object = New Object() {Nothing, ProductName, MinQuantity, Quantity, ArrivalDate, Status}
+            If (Not (parentAddProductRowByAddProductOrderProduct) Is Nothing) Then
+                columnValuesArray(0) = parentAddProductRowByAddProductOrderProduct(0)
+            End If
             rowOrderProductRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowOrderProductRow)
             Return rowOrderProductRow
@@ -870,7 +878,7 @@ Partial Public Class KSJMartInventorySystemDataSet
         Friend Sub InitVars()
             Me.columnSKU = MyBase.Columns("SKU")
             Me.columnProductName = MyBase.Columns("ProductName")
-            Me.columnMin_Quantity = MyBase.Columns("Min Quantity")
+            Me.columnMinQuantity = MyBase.Columns("MinQuantity")
             Me.columnQuantity = MyBase.Columns("Quantity")
             Me.columnArrivalDate = MyBase.Columns("ArrivalDate")
             Me.columnStatus = MyBase.Columns("Status")
@@ -883,8 +891,8 @@ Partial Public Class KSJMartInventorySystemDataSet
             MyBase.Columns.Add(Me.columnSKU)
             Me.columnProductName = New Global.System.Data.DataColumn("ProductName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnProductName)
-            Me.columnMin_Quantity = New Global.System.Data.DataColumn("Min Quantity", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMin_Quantity)
+            Me.columnMinQuantity = New Global.System.Data.DataColumn("MinQuantity", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMinQuantity)
             Me.columnQuantity = New Global.System.Data.DataColumn("Quantity", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnQuantity)
             Me.columnArrivalDate = New Global.System.Data.DataColumn("ArrivalDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
@@ -1727,6 +1735,16 @@ Partial Public Class KSJMartInventorySystemDataSet
         Public Sub SetBrandNull()
             Me(Me.tableAddProduct.BrandColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function GetOrderProductRows() As OrderProductRow()
+            If (Me.Table.ChildRelations("AddProductOrderProduct") Is Nothing) Then
+                Return New OrderProductRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("AddProductOrderProduct")),OrderProductRow())
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -1772,16 +1790,16 @@ Partial Public Class KSJMartInventorySystemDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property Min_Quantity() As Integer
+        Public Property MinQuantity() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableOrderProduct.Min_QuantityColumn),Integer)
+                    Return CType(Me(Me.tableOrderProduct.MinQuantityColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Min Quantity' in table 'OrderProduct' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'MinQuantity' in table 'OrderProduct' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableOrderProduct.Min_QuantityColumn) = value
+                Me(Me.tableOrderProduct.MinQuantityColumn) = value
             End Set
         End Property
         
@@ -1832,6 +1850,17 @@ Partial Public Class KSJMartInventorySystemDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property AddProductRow() As AddProductRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("AddProductOrderProduct")),AddProductRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("AddProductOrderProduct"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsProductNameNull() As Boolean
             Return Me.IsNull(Me.tableOrderProduct.ProductNameColumn)
         End Function
@@ -1844,14 +1873,14 @@ Partial Public Class KSJMartInventorySystemDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsMin_QuantityNull() As Boolean
-            Return Me.IsNull(Me.tableOrderProduct.Min_QuantityColumn)
+        Public Function IsMinQuantityNull() As Boolean
+            Return Me.IsNull(Me.tableOrderProduct.MinQuantityColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetMin_QuantityNull()
-            Me(Me.tableOrderProduct.Min_QuantityColumn) = Global.System.Convert.DBNull
+        Public Sub SetMinQuantityNull()
+            Me(Me.tableOrderProduct.MinQuantityColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2766,7 +2795,7 @@ Namespace KSJMartInventorySystemDataSetTableAdapters
             tableMapping.DataSetTable = "OrderProduct"
             tableMapping.ColumnMappings.Add("SKU", "SKU")
             tableMapping.ColumnMappings.Add("ProductName", "ProductName")
-            tableMapping.ColumnMappings.Add("Min Quantity", "Min Quantity")
+            tableMapping.ColumnMappings.Add("MinQuantity", "MinQuantity")
             tableMapping.ColumnMappings.Add("Quantity", "Quantity")
             tableMapping.ColumnMappings.Add("ArrivalDate", "ArrivalDate")
             tableMapping.ColumnMappings.Add("Status", "Status")
@@ -2774,16 +2803,16 @@ Namespace KSJMartInventorySystemDataSetTableAdapters
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `OrderProduct` WHERE ((`SKU` = ?) AND ((? = 1 AND `ProductName` IS NU"& _ 
-                "LL) OR (`ProductName` = ?)) AND ((? = 1 AND `Min Quantity` IS NULL) OR (`Min Qua"& _ 
-                "ntity` = ?)) AND ((? = 1 AND `Quantity` IS NULL) OR (`Quantity` = ?)) AND ((? = "& _ 
-                "1 AND `ArrivalDate` IS NULL) OR (`ArrivalDate` = ?)) AND ((? = 1 AND `Status` IS"& _ 
-                " NULL) OR (`Status` = ?)))"
+                "LL) OR (`ProductName` = ?)) AND ((? = 1 AND `MinQuantity` IS NULL) OR (`MinQuant"& _ 
+                "ity` = ?)) AND ((? = 1 AND `Quantity` IS NULL) OR (`Quantity` = ?)) AND ((? = 1 "& _ 
+                "AND `ArrivalDate` IS NULL) OR (`ArrivalDate` = ?)) AND ((? = 1 AND `Status` IS N"& _ 
+                "ULL) OR (`Status` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SKU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SKU", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_ProductName", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProductName", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ProductName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProductName", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Min_Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Min Quantity", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Min_Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Min Quantity", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_MinQuantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MinQuantity", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_MinQuantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MinQuantity", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Quantity", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Quantity", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_ArrivalDate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArrivalDate", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2792,35 +2821,35 @@ Namespace KSJMartInventorySystemDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Status", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Status", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `OrderProduct` (`SKU`, `ProductName`, `Min Quantity`, `Quantity`, `Ar"& _ 
-                "rivalDate`, `Status`) VALUES (?, ?, ?, ?, ?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `OrderProduct` (`SKU`, `ProductName`, `MinQuantity`, `Quantity`, `Arr"& _ 
+                "ivalDate`, `Status`) VALUES (?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SKU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SKU", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ProductName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProductName", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Min_Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Min Quantity", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MinQuantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MinQuantity", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Quantity", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ArrivalDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArrivalDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Status", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Status", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `OrderProduct` SET `SKU` = ?, `ProductName` = ?, `Min Quantity` = ?, `Quan"& _ 
-                "tity` = ?, `ArrivalDate` = ?, `Status` = ? WHERE ((`SKU` = ?) AND ((? = 1 AND `P"& _ 
-                "roductName` IS NULL) OR (`ProductName` = ?)) AND ((? = 1 AND `Min Quantity` IS N"& _ 
-                "ULL) OR (`Min Quantity` = ?)) AND ((? = 1 AND `Quantity` IS NULL) OR (`Quantity`"& _ 
-                " = ?)) AND ((? = 1 AND `ArrivalDate` IS NULL) OR (`ArrivalDate` = ?)) AND ((? = "& _ 
-                "1 AND `Status` IS NULL) OR (`Status` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `OrderProduct` SET `SKU` = ?, `ProductName` = ?, `MinQuantity` = ?, `Quant"& _ 
+                "ity` = ?, `ArrivalDate` = ?, `Status` = ? WHERE ((`SKU` = ?) AND ((? = 1 AND `Pr"& _ 
+                "oductName` IS NULL) OR (`ProductName` = ?)) AND ((? = 1 AND `MinQuantity` IS NUL"& _ 
+                "L) OR (`MinQuantity` = ?)) AND ((? = 1 AND `Quantity` IS NULL) OR (`Quantity` = "& _ 
+                "?)) AND ((? = 1 AND `ArrivalDate` IS NULL) OR (`ArrivalDate` = ?)) AND ((? = 1 A"& _ 
+                "ND `Status` IS NULL) OR (`Status` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SKU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SKU", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ProductName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProductName", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Min_Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Min Quantity", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MinQuantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MinQuantity", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Quantity", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ArrivalDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArrivalDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Status", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Status", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SKU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SKU", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_ProductName", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProductName", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ProductName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProductName", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Min_Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Min Quantity", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Min_Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Min Quantity", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_MinQuantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MinQuantity", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_MinQuantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MinQuantity", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Quantity", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Quantity", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_ArrivalDate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArrivalDate", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2839,12 +2868,39 @@ Namespace KSJMartInventorySystemDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT SKU, ProductName, [Min Quantity], Quantity, ArrivalDate, Status FROM Order"& _ 
-                "Product"
+            Me._commandCollection(0).CommandText = "SELECT SKU, ProductName, MinQuantity, Quantity, ArrivalDate, Status FROM OrderPro"& _ 
+                "duct"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "DELETE FROM OrderProduct "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE [SKU] = ?"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SKU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SKU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._commandCollection(2) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "INSERT INTO OrderProduct ([ProductName], [Min Quantity], [Quantity], [ArrivalData"& _ 
+                "], [Status], [SKU])"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES (?, ?, ?, ?, ?, ?)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ProductName", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProductName", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Min_Quantity", Global.System.Data.OleDb.OleDbType.[Variant], 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Min Quantity", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Quantity", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ArrivalData", Global.System.Data.OleDb.OleDbType.[Variant], 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArrivalData", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Status", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Status", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SKU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SKU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(3) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "UPDATE OrderProduct "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET [ProductName] = ?,[Min Quantity] = ?, [Quantity] = ?, ["& _ 
+                "ArrivalData] = ?, [Status] = ?"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE [SKU] = ?"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ProductName", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProductName", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Min_Quantity", Global.System.Data.OleDb.OleDbType.[Variant], 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Min Quantity", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Quantity", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Quantity", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ArrivalData", Global.System.Data.OleDb.OleDbType.[Variant], 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArrivalData", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Status", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Status", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SKU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SKU", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2903,7 +2959,7 @@ Namespace KSJMartInventorySystemDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_SKU As Integer, ByVal Original_ProductName As String, ByVal Original_Min_Quantity As Global.System.Nullable(Of Integer), ByVal Original_Quantity As Global.System.Nullable(Of Integer), ByVal Original_ArrivalDate As Global.System.Nullable(Of Date), ByVal Original_Status As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_SKU As Integer, ByVal Original_ProductName As String, ByVal Original_MinQuantity As Global.System.Nullable(Of Integer), ByVal Original_Quantity As Global.System.Nullable(Of Integer), ByVal Original_ArrivalDate As Global.System.Nullable(Of Date), ByVal Original_Status As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_SKU,Integer)
             If (Original_ProductName Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -2912,9 +2968,9 @@ Namespace KSJMartInventorySystemDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_ProductName,String)
             End If
-            If (Original_Min_Quantity.HasValue = true) Then
+            If (Original_MinQuantity.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Min_Quantity.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_MinQuantity.Value,Integer)
             Else
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
@@ -2959,15 +3015,15 @@ Namespace KSJMartInventorySystemDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal SKU As Integer, ByVal ProductName As String, ByVal Min_Quantity As Global.System.Nullable(Of Integer), ByVal Quantity As Global.System.Nullable(Of Integer), ByVal ArrivalDate As Global.System.Nullable(Of Date), ByVal Status As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal SKU As Integer, ByVal ProductName As String, ByVal MinQuantity As Global.System.Nullable(Of Integer), ByVal Quantity As Global.System.Nullable(Of Integer), ByVal ArrivalDate As Global.System.Nullable(Of Date), ByVal Status As String) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(SKU,Integer)
             If (ProductName Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(ProductName,String)
             End If
-            If (Min_Quantity.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Min_Quantity.Value,Integer)
+            If (MinQuantity.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(MinQuantity.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
@@ -3005,15 +3061,15 @@ Namespace KSJMartInventorySystemDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal SKU As Integer, ByVal ProductName As String, ByVal Min_Quantity As Global.System.Nullable(Of Integer), ByVal Quantity As Global.System.Nullable(Of Integer), ByVal ArrivalDate As Global.System.Nullable(Of Date), ByVal Status As String, ByVal Original_SKU As Integer, ByVal Original_ProductName As String, ByVal Original_Min_Quantity As Global.System.Nullable(Of Integer), ByVal Original_Quantity As Global.System.Nullable(Of Integer), ByVal Original_ArrivalDate As Global.System.Nullable(Of Date), ByVal Original_Status As String) As Integer
+        Public Overloads Overridable Function Update(ByVal SKU As Integer, ByVal ProductName As String, ByVal MinQuantity As Global.System.Nullable(Of Integer), ByVal Quantity As Global.System.Nullable(Of Integer), ByVal ArrivalDate As Global.System.Nullable(Of Date), ByVal Status As String, ByVal Original_SKU As Integer, ByVal Original_ProductName As String, ByVal Original_MinQuantity As Global.System.Nullable(Of Integer), ByVal Original_Quantity As Global.System.Nullable(Of Integer), ByVal Original_ArrivalDate As Global.System.Nullable(Of Date), ByVal Original_Status As String) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(SKU,Integer)
             If (ProductName Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(ProductName,String)
             End If
-            If (Min_Quantity.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Min_Quantity.Value,Integer)
+            If (MinQuantity.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(MinQuantity.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
@@ -3040,9 +3096,9 @@ Namespace KSJMartInventorySystemDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_ProductName,String)
             End If
-            If (Original_Min_Quantity.HasValue = true) Then
+            If (Original_MinQuantity.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Min_Quantity.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_MinQuantity.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
@@ -3087,8 +3143,127 @@ Namespace KSJMartInventorySystemDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal ProductName As String, ByVal Min_Quantity As Global.System.Nullable(Of Integer), ByVal Quantity As Global.System.Nullable(Of Integer), ByVal ArrivalDate As Global.System.Nullable(Of Date), ByVal Status As String, ByVal Original_SKU As Integer, ByVal Original_ProductName As String, ByVal Original_Min_Quantity As Global.System.Nullable(Of Integer), ByVal Original_Quantity As Global.System.Nullable(Of Integer), ByVal Original_ArrivalDate As Global.System.Nullable(Of Date), ByVal Original_Status As String) As Integer
-            Return Me.Update(Original_SKU, ProductName, Min_Quantity, Quantity, ArrivalDate, Status, Original_SKU, Original_ProductName, Original_Min_Quantity, Original_Quantity, Original_ArrivalDate, Original_Status)
+        Public Overloads Overridable Function Update(ByVal ProductName As String, ByVal MinQuantity As Global.System.Nullable(Of Integer), ByVal Quantity As Global.System.Nullable(Of Integer), ByVal ArrivalDate As Global.System.Nullable(Of Date), ByVal Status As String, ByVal Original_SKU As Integer, ByVal Original_ProductName As String, ByVal Original_MinQuantity As Global.System.Nullable(Of Integer), ByVal Original_Quantity As Global.System.Nullable(Of Integer), ByVal Original_ArrivalDate As Global.System.Nullable(Of Date), ByVal Original_Status As String) As Integer
+            Return Me.Update(Original_SKU, ProductName, MinQuantity, Quantity, ArrivalDate, Status, Original_SKU, Original_ProductName, Original_MinQuantity, Original_Quantity, Original_ArrivalDate, Original_Status)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
+        Public Overloads Overridable Function DeleteQuery(ByVal SKU As Integer) As Integer
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(1)
+            command.Parameters(0).Value = CType(SKU,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function InsertQuery(ByVal ProductName As String, ByVal Min_Quantity As Object, ByVal Quantity As Global.System.Nullable(Of Integer), ByVal ArrivalData As Object, ByVal Status As String, ByVal SKU As Integer) As Integer
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(2)
+            If (ProductName Is Nothing) Then
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(0).Value = CType(ProductName,String)
+            End If
+            If (Min_Quantity Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Min_Quantity")
+            Else
+                command.Parameters(1).Value = CType(Min_Quantity,Object)
+            End If
+            If (Quantity.HasValue = true) Then
+                command.Parameters(2).Value = CType(Quantity.Value,Integer)
+            Else
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (ArrivalData Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ArrivalData")
+            Else
+                command.Parameters(3).Value = CType(ArrivalData,Object)
+            End If
+            If (Status Is Nothing) Then
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(4).Value = CType(Status,String)
+            End If
+            command.Parameters(5).Value = CType(SKU,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function UpdateQuery(ByVal ProductName As String, ByVal Min_Quantity As Object, ByVal Quantity As Global.System.Nullable(Of Integer), ByVal ArrivalData As Object, ByVal Status As String, ByVal Original_SKU As Integer) As Integer
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(3)
+            If (ProductName Is Nothing) Then
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(0).Value = CType(ProductName,String)
+            End If
+            If (Min_Quantity Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Min_Quantity")
+            Else
+                command.Parameters(1).Value = CType(Min_Quantity,Object)
+            End If
+            If (Quantity.HasValue = true) Then
+                command.Parameters(2).Value = CType(Quantity.Value,Integer)
+            Else
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (ArrivalData Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ArrivalData")
+            Else
+                command.Parameters(3).Value = CType(ArrivalData,Object)
+            End If
+            If (Status Is Nothing) Then
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(4).Value = CType(Status,String)
+            End If
+            command.Parameters(5).Value = CType(Original_SKU,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     

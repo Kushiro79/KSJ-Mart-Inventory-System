@@ -1,15 +1,19 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Data.Common
+Imports System.Data.OleDb
+Imports KSJMartInventorySystem.KSJMartInventorySystemDataSetTableAdapters
 Public Class ManageStock
-    Private connectionString As String = "Provider=Microsoft.Jet.OLEDB.12.0; Data Source=C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
+    Private connectionString As String = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Project\VB.Net\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
     Private adapter As OleDbDataAdapter
     Private dt As New DataTable()
+    Dim command As String
 
     Private Sub ManageStock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'KSJMartInventorySystemDataSet.OrderProduct' table. You can move, or remove it, as needed.
-        Me.OrderProductTableAdapter.Fill(Me.KSJMartInventorySystemDataSet.OrderProduct)
-        RefreshOrderProductDataGridView()
+        Me.OrderProductTableAdapter.Fill(KSJMartInventorySystemDataSet.OrderProduct)
 
     End Sub
+
+
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Me.Hide()
@@ -23,38 +27,42 @@ Public Class ManageStock
 
     End Sub
 
-    Private Sub DataGridView1_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles OrderProductDataGridView.CellFormatting
-        If OrderProductDataGridView.Columns(e.ColumnIndex).Name = "Status" Then
-            Dim status As String = e.Value.ToString()
-            Select Case status
-                Case "In Stock"
-                    e.CellStyle.BackColor = Color.Green
-                Case "Low Stock"
-                    e.CellStyle.BackColor = Color.Yellow
-                Case "No Stock"
-                    e.CellStyle.BackColor = Color.Red
-            End Select
-        End If
+
+
+    Private Sub NextButton_Click(sender As Object, e As EventArgs) Handles NextButton.Click
+        OrderProductBindingSource.MoveNext()
     End Sub
 
+    Private Sub PreviousButton_Click(sender As Object, e As EventArgs) Handles PreviousButton.Click
+        OrderProductBindingSource.MovePrevious()
+    End Sub
 
+    Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
+        Try
+            ' Call the UpdateQuery method with parameters
+            Dim rowsAffected As Integer = OrderProductTableAdapter.UpdateQuery(
+                ProductNameTextBox.Text,
+                Convert.ToInt32(MinQuantityTextBox.Text), ' Ensure this is the correct type
+                Convert.ToInt32(QuantityTextBox.Text), ' Ensure this is the correct type
+                ArrivalDateDateTimePicker.Value,
+                StatusTextBox.Text,
+                SKUTextBox.Text
+            )
 
+            If rowsAffected > 0 Then
+                MessageBox.Show("Update Successful")
+            Else
+                MessageBox.Show("No records updated.")
+            End If
 
-    Public Sub RefreshOrderProductDataGridView()
-         Try
-            Using connection As New OleDbConnection(connectionString)
-                ' Fetch from OrderProduct instead of AddProduct
-                Dim query As String = "SELECT SKU, ProductName FROM OrderProduct"
-                Dim adapter As New OleDbDataAdapter(query, connection)
-                Dim dt As New DataTable()
-                adapter.Fill(dt)
-                OrderProductDataGridView.DataSource = dt
-            End Using
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
-
     End Sub
+
+
+
+
 
 
 

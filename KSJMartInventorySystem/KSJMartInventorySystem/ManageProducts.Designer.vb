@@ -32,31 +32,33 @@ Partial Class ManageProducts
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.KSJMartInventorySystemDataSet = New KSJMartInventorySystem.KSJMartInventorySystemDataSet()
+        Me.AddProductDataGridView = New System.Windows.Forms.DataGridView()
         Me.AddProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KSJMartInventorySystemDataSet = New KSJMartInventorySystem.KSJMartInventorySystemDataSet()
         Me.AddProductTableAdapter = New KSJMartInventorySystem.KSJMartInventorySystemDataSetTableAdapters.AddProductTableAdapter()
         Me.TableAdapterManager = New KSJMartInventorySystem.KSJMartInventorySystemDataSetTableAdapters.TableAdapterManager()
-        Me.AddProductDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OrderProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OrderProductTableAdapter = New KSJMartInventorySystem.KSJMartInventorySystemDataSetTableAdapters.OrderProductTableAdapter()
+        Me.SKUDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SupplierDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BrandDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KSJMartInventorySystemDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AddProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddProductDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AddProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KSJMartInventorySystemDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OrderProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Orange
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(16, 15)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(33, 37)
+        Me.PictureBox2.Size = New System.Drawing.Size(25, 30)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 18
         Me.PictureBox2.TabStop = False
@@ -67,10 +69,9 @@ Partial Class ManageProducts
         Me.PictureBox3.BackColor = System.Drawing.Color.Orange
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(1032, 15)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox3.Location = New System.Drawing.Point(774, 12)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(33, 37)
+        Me.PictureBox3.Size = New System.Drawing.Size(25, 30)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 17
         Me.PictureBox3.TabStop = False
@@ -83,9 +84,8 @@ Partial Class ManageProducts
         Me.Label2.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Maroon
         Me.Label2.Location = New System.Drawing.Point(0, 0)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(1081, 61)
+        Me.Label2.Size = New System.Drawing.Size(811, 50)
         Me.Label2.TabIndex = 16
         Me.Label2.Text = "KSJ Mart Inventory Management System"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -95,20 +95,18 @@ Partial Class ManageProducts
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Leelawadee UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Maroon
-        Me.Label1.Location = New System.Drawing.Point(16, 79)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(12, 64)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(242, 37)
+        Me.Label1.Size = New System.Drawing.Size(185, 30)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Manage Products"
         '
         'TextBox1
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Location = New System.Drawing.Point(329, 90)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox1.Location = New System.Drawing.Point(247, 73)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(238, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(179, 20)
         Me.TextBox1.TabIndex = 19
         '
         'Button1
@@ -117,10 +115,9 @@ Partial Class ManageProducts
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Maroon
-        Me.Button1.Location = New System.Drawing.Point(576, 90)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(432, 73)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 26)
+        Me.Button1.Size = New System.Drawing.Size(75, 21)
         Me.Button1.TabIndex = 20
         Me.Button1.Text = "Search"
         Me.Button1.UseVisualStyleBackColor = False
@@ -131,10 +128,9 @@ Partial Class ManageProducts
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Maroon
-        Me.Button2.Location = New System.Drawing.Point(980, 90)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Location = New System.Drawing.Point(735, 73)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(71, 28)
+        Me.Button2.Size = New System.Drawing.Size(53, 23)
         Me.Button2.TabIndex = 21
         Me.Button2.Text = "+Add"
         Me.Button2.UseVisualStyleBackColor = False
@@ -142,22 +138,35 @@ Partial Class ManageProducts
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(684, 90)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBox1.Location = New System.Drawing.Point(513, 73)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(81, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(62, 21)
         Me.ComboBox1.TabIndex = 22
         Me.ComboBox1.Text = "Sort"
         '
-        'KSJMartInventorySystemDataSet
+        'AddProductDataGridView
         '
-        Me.KSJMartInventorySystemDataSet.DataSetName = "KSJMartInventorySystemDataSet"
-        Me.KSJMartInventorySystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.AddProductDataGridView.AutoGenerateColumns = False
+        Me.AddProductDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.AddProductDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.AddProductDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SKUDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.SupplierDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn, Me.BrandDataGridViewTextBoxColumn})
+        Me.AddProductDataGridView.DataSource = Me.AddProductBindingSource
+        Me.AddProductDataGridView.Location = New System.Drawing.Point(17, 98)
+        Me.AddProductDataGridView.Margin = New System.Windows.Forms.Padding(2)
+        Me.AddProductDataGridView.Name = "AddProductDataGridView"
+        Me.AddProductDataGridView.RowTemplate.Height = 24
+        Me.AddProductDataGridView.Size = New System.Drawing.Size(771, 338)
+        Me.AddProductDataGridView.TabIndex = 22
         '
         'AddProductBindingSource
         '
         Me.AddProductBindingSource.DataMember = "AddProduct"
         Me.AddProductBindingSource.DataSource = Me.KSJMartInventorySystemDataSet
+        '
+        'KSJMartInventorySystemDataSet
+        '
+        Me.KSJMartInventorySystemDataSet.DataSetName = "KSJMartInventorySystemDataSet"
+        Me.KSJMartInventorySystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'AddProductTableAdapter
         '
@@ -172,54 +181,51 @@ Partial Class ManageProducts
         Me.TableAdapterManager.SupplierTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = KSJMartInventorySystem.KSJMartInventorySystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'AddProductDataGridView
+        'OrderProductBindingSource
         '
-        Me.AddProductDataGridView.AutoGenerateColumns = False
-        Me.AddProductDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.AddProductDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
-        Me.AddProductDataGridView.DataSource = Me.AddProductBindingSource
-        Me.AddProductDataGridView.Location = New System.Drawing.Point(62, 142)
-        Me.AddProductDataGridView.Name = "AddProductDataGridView"
-        Me.AddProductDataGridView.RowTemplate.Height = 24
-        Me.AddProductDataGridView.Size = New System.Drawing.Size(1007, 302)
-        Me.AddProductDataGridView.TabIndex = 22
+        Me.OrderProductBindingSource.DataMember = "OrderProduct"
+        Me.OrderProductBindingSource.DataSource = Me.KSJMartInventorySystemDataSet
         '
-        'DataGridViewTextBoxColumn1
+        'OrderProductTableAdapter
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "SKU"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "SKU"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.OrderProductTableAdapter.ClearBeforeFill = True
         '
-        'DataGridViewTextBoxColumn2
+        'SKUDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "ProductName"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "ProductName"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.SKUDataGridViewTextBoxColumn.DataPropertyName = "SKU"
+        Me.SKUDataGridViewTextBoxColumn.HeaderText = "SKU"
+        Me.SKUDataGridViewTextBoxColumn.Name = "SKUDataGridViewTextBoxColumn"
         '
-        'DataGridViewTextBoxColumn3
+        'ProductNameDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Supplier"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Supplier"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.ProductNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName"
+        Me.ProductNameDataGridViewTextBoxColumn.HeaderText = "ProductName"
+        Me.ProductNameDataGridViewTextBoxColumn.Name = "ProductNameDataGridViewTextBoxColumn"
         '
-        'DataGridViewTextBoxColumn4
+        'SupplierDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Price"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Price"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.SupplierDataGridViewTextBoxColumn.DataPropertyName = "Supplier"
+        Me.SupplierDataGridViewTextBoxColumn.HeaderText = "Supplier"
+        Me.SupplierDataGridViewTextBoxColumn.Name = "SupplierDataGridViewTextBoxColumn"
         '
-        'DataGridViewTextBoxColumn5
+        'PriceDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Brand"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Brand"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "Price"
+        Me.PriceDataGridViewTextBoxColumn.HeaderText = "Price"
+        Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
+        '
+        'BrandDataGridViewTextBoxColumn
+        '
+        Me.BrandDataGridViewTextBoxColumn.DataPropertyName = "Brand"
+        Me.BrandDataGridViewTextBoxColumn.HeaderText = "Brand"
+        Me.BrandDataGridViewTextBoxColumn.Name = "BrandDataGridViewTextBoxColumn"
         '
         'ManageProducts
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Wheat
-        Me.ClientSize = New System.Drawing.Size(1081, 554)
+        Me.ClientSize = New System.Drawing.Size(811, 450)
         Me.Controls.Add(Me.AddProductDataGridView)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button2)
@@ -229,14 +235,14 @@ Partial Class ManageProducts
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ManageProducts"
         Me.Text = "ManageProducts"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KSJMartInventorySystemDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AddProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddProductDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AddProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KSJMartInventorySystemDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OrderProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -254,10 +260,12 @@ Partial Class ManageProducts
     Friend WithEvents AddProductBindingSource As BindingSource
     Friend WithEvents AddProductTableAdapter As KSJMartInventorySystemDataSetTableAdapters.AddProductTableAdapter
     Friend WithEvents TableAdapterManager As KSJMartInventorySystemDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents AddProductDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents AddProductDataGridView As DataGridView
+    Friend WithEvents OrderProductBindingSource As BindingSource
+    Friend WithEvents OrderProductTableAdapter As KSJMartInventorySystemDataSetTableAdapters.OrderProductTableAdapter
+    Friend WithEvents SKUDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ProductNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SupplierDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BrandDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
