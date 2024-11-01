@@ -1,77 +1,77 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\",
+  "WorkspaceRootPath": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\managestock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\managestock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\managestock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|c:\\project\\vb.net\\ksj-mart-inventory-system\\ksjmartinventorysystem\\ksjmartinventorysystem\\managestock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\managestock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\managestock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\manageproducts.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\manageproducts.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|c:\\project\\vb.net\\ksj-mart-inventory-system\\ksjmartinventorysystem\\ksjmartinventorysystem\\ksjmartinventorysystemdataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
-      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\ksjmartinventorysystemdataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|c:\\project\\vb.net\\ksj-mart-inventory-system\\ksjmartinventorysystem\\ksjmartinventorysystem\\ksjmartinventorysystemdataset1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\ksjmartinventorysystemdataset1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\manageproducts.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|c:\\users\\masri\\onedrive\\documents\\github\\ksj-mart-inventory-system\\ksjmartinventorysystem\\ksjmartinventorysystem\\manageproducts.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\manageproducts.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\homepage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\homepage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\manageproducts.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\manageproducts.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\dialog1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\dialog1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|c:\\project\\vb.net\\ksj-mart-inventory-system\\ksjmartinventorysystem\\ksjmartinventorysystem\\aboutmart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\aboutmart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\applicationevents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\applicationevents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\dialog1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\dialog1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\dialog1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\aboutmart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\aboutmart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\homepage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\homepage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\homepage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\ksjmartinventorysystemdataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\ksjmartinventorysystemdataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\ksjmartinventorysystemdataset1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\ksjmartinventorysystemdataset1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\homepage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\homepage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\dialog1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\dialog1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\aboutmart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\aboutmart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\applicationevents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\applicationevents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\aboutmart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\aboutmart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\ksjmartinventorysystem\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{107026C5-7111-4E23-9698-4CA3AF5080F9}|KSJMartInventorySystem\\KSJMartInventorySystem.vbproj|solutionrelative:ksjmartinventorysystem\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
@@ -82,21 +82,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ManageStock.vb",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageStock.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageStock.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\ManageStock.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageStock.vb",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageStock.vb",
               "RelativeToolTip": "KSJMartInventorySystem\\ManageStock.vb",
-              "ViewState": "AQIAABMAAAAAAAAAAAAswDsAAAAPAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwFMAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-10-25T18:16:11.61Z",
               "IsPinned": true,
@@ -106,9 +102,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ManageStock.vb [Design]",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageStock.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageStock.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\ManageStock.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageStock.vb [Design]",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageStock.vb [Design]",
               "RelativeToolTip": "KSJMartInventorySystem\\ManageStock.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-10-27T10:38:08.099Z",
@@ -116,11 +112,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "KSJMartInventorySystemDataSet1.vb",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\KSJMartInventorySystemDataSet1.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\KSJMartInventorySystemDataSet1.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\KSJMartInventorySystemDataSet1.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\KSJMartInventorySystemDataSet1.vb",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\KSJMartInventorySystemDataSet1.vb",
               "RelativeToolTip": "KSJMartInventorySystem\\KSJMartInventorySystemDataSet1.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -129,11 +125,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "KSJMartInventorySystemDataSet1.xsd",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\KSJMartInventorySystemDataSet1.xsd",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\KSJMartInventorySystemDataSet1.xsd",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\KSJMartInventorySystemDataSet1.xsd",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\KSJMartInventorySystemDataSet1.xsd",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\KSJMartInventorySystemDataSet1.xsd",
               "RelativeToolTip": "KSJMartInventorySystem\\KSJMartInventorySystemDataSet1.xsd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
               "WhenOpened": "2024-10-27T10:31:07.811Z",
@@ -141,50 +137,49 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "ManageProducts.vb",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageProducts.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageProducts.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\ManageProducts.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageProducts.vb",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageProducts.vb",
               "RelativeToolTip": "KSJMartInventorySystem\\ManageProducts.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAZAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAASwIAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-10-27T07:49:11.453Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "Dialog1.vb",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Dialog1.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Dialog1.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\Dialog1.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Dialog1.vb",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Dialog1.vb",
               "RelativeToolTip": "KSJMartInventorySystem\\Dialog1.vb",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAowDUAAABdAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAADwv1UAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-10-27T07:38:07.209Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "ApplicationEvents.vb",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ApplicationEvents.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ApplicationEvents.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\ApplicationEvents.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ApplicationEvents.vb",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ApplicationEvents.vb",
               "RelativeToolTip": "KSJMartInventorySystem\\ApplicationEvents.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-25T19:15:53.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T19:15:53.035Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ManageProducts.vb [Design]",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageProducts.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageProducts.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\ManageProducts.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageProducts.vb [Design]",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\ManageProducts.vb [Design]",
               "RelativeToolTip": "KSJMartInventorySystem\\ManageProducts.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-10-25T19:05:02.013Z",
@@ -192,11 +187,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Dialog1.vb [Design]",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Dialog1.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Dialog1.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\Dialog1.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Dialog1.vb [Design]",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Dialog1.vb [Design]",
               "RelativeToolTip": "KSJMartInventorySystem\\Dialog1.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-10-25T18:35:11.336Z",
@@ -204,36 +199,34 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "HomePage.vb [Design]",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\HomePage.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\HomePage.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\HomePage.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\HomePage.vb [Design]",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\HomePage.vb [Design]",
               "RelativeToolTip": "KSJMartInventorySystem\\HomePage.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-17T04:50:13.944Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-17T04:50:13.944Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 6,
               "Title": "HomePage.vb",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\HomePage.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\HomePage.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\HomePage.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\HomePage.vb",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\HomePage.vb",
               "RelativeToolTip": "KSJMartInventorySystem\\HomePage.vb",
-              "ViewState": "AQIAAAEAAAAAAAAAAIA6wCIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-17T05:40:11.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T05:40:11.035Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "Application.Designer.vb",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\My Project\\Application.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\My Project\\Application.Designer.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\My Project\\Application.Designer.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\My Project\\Application.Designer.vb",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\My Project\\Application.Designer.vb",
               "RelativeToolTip": "KSJMartInventorySystem\\My Project\\Application.Designer.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -241,11 +234,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "SplashScreen1.vb",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\SplashScreen1.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\SplashScreen1.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\SplashScreen1.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\SplashScreen1.vb",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\SplashScreen1.vb",
               "RelativeToolTip": "KSJMartInventorySystem\\SplashScreen1.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -253,62 +246,62 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "SplashScreen1.vb [Design]",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\SplashScreen1.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\SplashScreen1.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\SplashScreen1.vb",
               "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\SplashScreen1.vb [Design]",
-              "RelativeToolTip": "KSJMartInventorySystem\\SplashScreen1.vb [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\SplashScreen1.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-10-17T04:21:57.819Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "AboutMart.vb",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\AboutMart.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\AboutMart.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\AboutMart.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\AboutMart.vb",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\AboutMart.vb",
               "RelativeToolTip": "KSJMartInventorySystem\\AboutMart.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-17T02:53:01.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T02:53:01.14Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "AboutMart.vb [Design]",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\AboutMart.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\AboutMart.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\AboutMart.vb",
               "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\AboutMart.vb [Design]",
-              "RelativeToolTip": "KSJMartInventorySystem\\AboutMart.vb [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\AboutMart.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-17T02:45:37.205Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-17T02:45:37.205Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 5,
               "Title": "Login.vb",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Login.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Login.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\Login.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Login.vb",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Login.vb",
               "RelativeToolTip": "KSJMartInventorySystem\\Login.vb",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAIwGMAAAAoAAAA",
+              "ViewState": "AQIAAF8AAAAAAAAAAADwv34AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-16T08:27:13.403Z"
+              "WhenOpened": "2024-10-16T08:27:13.403Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "Login.vb [Design]",
-              "DocumentMoniker": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Login.vb",
+              "DocumentMoniker": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Login.vb",
               "RelativeDocumentMoniker": "KSJMartInventorySystem\\Login.vb",
-              "ToolTip": "C:\\Project\\VB.Net\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Login.vb [Design]",
+              "ToolTip": "C:\\Users\\masri\\OneDrive\\Documents\\GitHub\\KSJ-Mart-Inventory-System\\KSJMartInventorySystem\\KSJMartInventorySystem\\Login.vb [Design]",
               "RelativeToolTip": "KSJMartInventorySystem\\Login.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-16T07:39:16.503Z"
+              "WhenOpened": "2024-10-16T07:39:16.503Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -109,8 +109,7 @@ Public Class Login
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb")
-
+        Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\masri\OneDrive\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb")
         Dim username As String = TextBox1.Text
         Dim password As String = TextBox2.Text
 
@@ -124,16 +123,19 @@ Public Class Login
             Dim result As Integer = Convert.ToInt32(cmd.ExecuteScalar())
 
             If result > 0 Then
-                MessageBox.Show("Login Successfull")
+                Dim customMessageBox As New CustomMessageBox("Login Successful", "Success")
+                customMessageBox.ShowDialog()
                 HomePage.Show()
                 Me.Hide()
 
             Else
-                MessageBox.Show("Invalid username or password")
+                Dim customMessageBox As New CustomMessageBox("Invalid username or password", "Error")
+                customMessageBox.ShowDialog()
             End If
 
         Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
+            Dim customMessageBox As New CustomMessageBox("Error: " & ex.Message, "Error")
+            customMessageBox.ShowDialog()
         Finally
 
 
@@ -148,6 +150,4 @@ Public Class Login
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
 
     End Sub
-
-  
 End Class

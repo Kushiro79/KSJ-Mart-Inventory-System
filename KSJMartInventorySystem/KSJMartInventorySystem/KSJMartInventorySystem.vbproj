@@ -206,6 +206,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CustomMessageBox.Designer.vb">
+      <DependentUpon>CustomMessageBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomMessageBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialog1.Designer.vb">
       <DependentUpon>Dialog1.vb</DependentUpon>
     </Compile>
@@ -271,6 +277,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AboutMart.resx">
       <DependentUpon>AboutMart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialog1.resx">
       <DependentUpon>Dialog1.vb</DependentUpon>

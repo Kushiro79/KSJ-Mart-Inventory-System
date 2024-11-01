@@ -76,7 +76,7 @@ Partial Class ManageStock
         SKULabel.Location = New System.Drawing.Point(948, 117)
         SKULabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         SKULabel.Name = "SKULabel"
-        SKULabel.Size = New System.Drawing.Size(40, 17)
+        SKULabel.Size = New System.Drawing.Size(37, 16)
         SKULabel.TabIndex = 41
         SKULabel.Text = "SKU:"
         '
@@ -86,7 +86,7 @@ Partial Class ManageStock
         ProductNameLabel.Location = New System.Drawing.Point(948, 149)
         ProductNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         ProductNameLabel.Name = "ProductNameLabel"
-        ProductNameLabel.Size = New System.Drawing.Size(102, 17)
+        ProductNameLabel.Size = New System.Drawing.Size(96, 16)
         ProductNameLabel.TabIndex = 43
         ProductNameLabel.Text = "Product Name:"
         '
@@ -96,7 +96,7 @@ Partial Class ManageStock
         MinQuantityLabel.Location = New System.Drawing.Point(948, 181)
         MinQuantityLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         MinQuantityLabel.Name = "MinQuantityLabel"
-        MinQuantityLabel.Size = New System.Drawing.Size(91, 17)
+        MinQuantityLabel.Size = New System.Drawing.Size(82, 16)
         MinQuantityLabel.TabIndex = 45
         MinQuantityLabel.Text = "Min Quantity:"
         '
@@ -106,7 +106,7 @@ Partial Class ManageStock
         QuantityLabel.Location = New System.Drawing.Point(948, 213)
         QuantityLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         QuantityLabel.Name = "QuantityLabel"
-        QuantityLabel.Size = New System.Drawing.Size(65, 17)
+        QuantityLabel.Size = New System.Drawing.Size(58, 16)
         QuantityLabel.TabIndex = 47
         QuantityLabel.Text = "Quantity:"
         '
@@ -116,7 +116,7 @@ Partial Class ManageStock
         ArrivalDateLabel.Location = New System.Drawing.Point(948, 246)
         ArrivalDateLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         ArrivalDateLabel.Name = "ArrivalDateLabel"
-        ArrivalDateLabel.Size = New System.Drawing.Size(86, 17)
+        ArrivalDateLabel.Size = New System.Drawing.Size(80, 16)
         ArrivalDateLabel.TabIndex = 49
         ArrivalDateLabel.Text = "Arrival Date:"
         '
@@ -126,7 +126,7 @@ Partial Class ManageStock
         StatusLabel.Location = New System.Drawing.Point(948, 277)
         StatusLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         StatusLabel.Name = "StatusLabel"
-        StatusLabel.Size = New System.Drawing.Size(52, 17)
+        StatusLabel.Size = New System.Drawing.Size(47, 16)
         StatusLabel.TabIndex = 51
         StatusLabel.Text = "Status:"
         '
@@ -188,7 +188,7 @@ Partial Class ManageStock
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(1409, 15)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(33, 37)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -200,7 +200,7 @@ Partial Class ManageStock
         Me.PictureBox2.BackColor = System.Drawing.Color.Orange
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(16, 15)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(33, 37)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -214,7 +214,7 @@ Partial Class ManageStock
         Me.NextButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NextButton.ForeColor = System.Drawing.Color.Maroon
         Me.NextButton.Location = New System.Drawing.Point(1117, 336)
-        Me.NextButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.NextButton.Margin = New System.Windows.Forms.Padding(4)
         Me.NextButton.Name = "NextButton"
         Me.NextButton.Size = New System.Drawing.Size(100, 28)
         Me.NextButton.TabIndex = 27
@@ -228,7 +228,7 @@ Partial Class ManageStock
         Me.PreviousButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PreviousButton.ForeColor = System.Drawing.Color.Maroon
         Me.PreviousButton.Location = New System.Drawing.Point(1009, 336)
-        Me.PreviousButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PreviousButton.Margin = New System.Windows.Forms.Padding(4)
         Me.PreviousButton.Name = "PreviousButton"
         Me.PreviousButton.Size = New System.Drawing.Size(100, 28)
         Me.PreviousButton.TabIndex = 28
@@ -242,7 +242,7 @@ Partial Class ManageStock
         Me.SaveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SaveButton.ForeColor = System.Drawing.Color.Maroon
         Me.SaveButton.Location = New System.Drawing.Point(1225, 336)
-        Me.SaveButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SaveButton.Margin = New System.Windows.Forms.Padding(4)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(100, 28)
         Me.SaveButton.TabIndex = 29
@@ -251,6 +251,7 @@ Partial Class ManageStock
         '
         'ContextMenuStrip1
         '
+        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
@@ -266,8 +267,9 @@ Partial Class ManageStock
         Me.OrderProductDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.OrderProductDataGridView.DataSource = Me.OrderProductBindingSource
         Me.OrderProductDataGridView.Location = New System.Drawing.Point(16, 107)
-        Me.OrderProductDataGridView.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.OrderProductDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.OrderProductDataGridView.Name = "OrderProductDataGridView"
+        Me.OrderProductDataGridView.RowHeadersWidth = 51
         Me.OrderProductDataGridView.Size = New System.Drawing.Size(851, 496)
         Me.OrderProductDataGridView.TabIndex = 41
         '
@@ -275,43 +277,55 @@ Partial Class ManageStock
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "SKU"
         Me.DataGridViewTextBoxColumn1.HeaderText = "SKU"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Width = 125
         '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "ProductName"
         Me.DataGridViewTextBoxColumn2.HeaderText = "ProductName"
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 125
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "MinQuantity"
         Me.DataGridViewTextBoxColumn3.HeaderText = "MinQuantity"
+        Me.DataGridViewTextBoxColumn3.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 125
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "Quantity"
         Me.DataGridViewTextBoxColumn4.HeaderText = "Quantity"
+        Me.DataGridViewTextBoxColumn4.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 125
         '
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "ArrivalDate"
         Me.DataGridViewTextBoxColumn5.HeaderText = "ArrivalDate"
+        Me.DataGridViewTextBoxColumn5.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.Width = 125
         '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "Status"
         Me.DataGridViewTextBoxColumn6.HeaderText = "Status"
+        Me.DataGridViewTextBoxColumn6.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.Width = 125
         '
         'SKUTextBox
         '
         Me.SKUTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrderProductBindingSource, "SKU", True))
         Me.SKUTextBox.Location = New System.Drawing.Point(1060, 113)
-        Me.SKUTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SKUTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.SKUTextBox.Name = "SKUTextBox"
         Me.SKUTextBox.Size = New System.Drawing.Size(265, 22)
         Me.SKUTextBox.TabIndex = 42
@@ -320,7 +334,7 @@ Partial Class ManageStock
         '
         Me.ProductNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrderProductBindingSource, "ProductName", True))
         Me.ProductNameTextBox.Location = New System.Drawing.Point(1060, 145)
-        Me.ProductNameTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ProductNameTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.ProductNameTextBox.Name = "ProductNameTextBox"
         Me.ProductNameTextBox.Size = New System.Drawing.Size(265, 22)
         Me.ProductNameTextBox.TabIndex = 44
@@ -329,7 +343,7 @@ Partial Class ManageStock
         '
         Me.MinQuantityTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrderProductBindingSource, "MinQuantity", True))
         Me.MinQuantityTextBox.Location = New System.Drawing.Point(1060, 177)
-        Me.MinQuantityTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MinQuantityTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.MinQuantityTextBox.Name = "MinQuantityTextBox"
         Me.MinQuantityTextBox.Size = New System.Drawing.Size(265, 22)
         Me.MinQuantityTextBox.TabIndex = 46
@@ -338,7 +352,7 @@ Partial Class ManageStock
         '
         Me.QuantityTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrderProductBindingSource, "Quantity", True))
         Me.QuantityTextBox.Location = New System.Drawing.Point(1060, 209)
-        Me.QuantityTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.QuantityTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.QuantityTextBox.Name = "QuantityTextBox"
         Me.QuantityTextBox.Size = New System.Drawing.Size(265, 22)
         Me.QuantityTextBox.TabIndex = 48
@@ -347,7 +361,7 @@ Partial Class ManageStock
         '
         Me.ArrivalDateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.OrderProductBindingSource, "ArrivalDate", True))
         Me.ArrivalDateDateTimePicker.Location = New System.Drawing.Point(1060, 241)
-        Me.ArrivalDateDateTimePicker.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ArrivalDateDateTimePicker.Margin = New System.Windows.Forms.Padding(4)
         Me.ArrivalDateDateTimePicker.Name = "ArrivalDateDateTimePicker"
         Me.ArrivalDateDateTimePicker.Size = New System.Drawing.Size(265, 22)
         Me.ArrivalDateDateTimePicker.TabIndex = 50
@@ -356,7 +370,7 @@ Partial Class ManageStock
         '
         Me.StatusTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrderProductBindingSource, "Status", True))
         Me.StatusTextBox.Location = New System.Drawing.Point(1060, 273)
-        Me.StatusTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.StatusTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.StatusTextBox.Name = "StatusTextBox"
         Me.StatusTextBox.Size = New System.Drawing.Size(265, 22)
         Me.StatusTextBox.TabIndex = 52
@@ -387,7 +401,7 @@ Partial Class ManageStock
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ManageStock"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ManageStock"

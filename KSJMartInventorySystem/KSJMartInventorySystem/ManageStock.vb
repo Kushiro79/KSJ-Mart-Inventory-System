@@ -2,7 +2,7 @@
 Imports System.Data.OleDb
 Imports KSJMartInventorySystem.KSJMartInventorySystemDataSetTableAdapters
 Public Class ManageStock
-    Private connectionString As String = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\Users\User\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
+    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\masri\OneDrive\Documents\GitHub\KSJ-Mart-Inventory-System\KSJMartInventorySystem\KSJMartInventorySystem\KSJMartInventorySystem.mdb"
     Private adapter As OleDbDataAdapter
     Private dt As New DataTable()
     Dim command As String
@@ -10,6 +10,7 @@ Public Class ManageStock
     Private Sub ManageStock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'KSJMartInventorySystemDataSet.OrderProduct' table. You can move, or remove it, as needed.
         Me.OrderProductTableAdapter.Fill(KSJMartInventorySystemDataSet.OrderProduct)
+        AddHandler OrderProductDataGridView.CellFormatting, AddressOf OrderProductDataGridView_CellFormatting
 
     End Sub
 
@@ -39,34 +40,55 @@ Public Class ManageStock
 
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
         If String.IsNullOrWhiteSpace(ProductNameTextBox.Text) Or
-        String.IsNullOrWhiteSpace(MinQuantityTextBox.Text) Or
-        String.IsNullOrWhiteSpace(QuantityTextBox.Text) Or
-        String.IsNullOrWhiteSpace(StatusTextBox.Text) Or
-        String.IsNullOrWhiteSpace(SKUTextBox.Text) Then
+       String.IsNullOrWhiteSpace(MinQuantityTextBox.Text) Or
+       String.IsNullOrWhiteSpace(QuantityTextBox.Text) Or
+       String.IsNullOrWhiteSpace(SKUTextBox.Text) Then
 
-            MessageBox.Show("Please fill all fields.")
+            Dim customMessageBox As New CustomMessageBox("Please fill all fields.", "Warning")
+            customMessageBox.ShowDialog()
             Return
         End If
 
-        ' Call the UpdateQuery method with parameters to update Access database
+        ' Call the UpdateQuery method to update the database
         Dim rowsAffected As Integer = UpdateQuery(
-            ProductNameTextBox.Text,
-            Convert.ToInt32(MinQuantityTextBox.Text),
-            Convert.ToInt32(QuantityTextBox.Text),
-            ArrivalDateDateTimePicker.Value,
-            StatusTextBox.Text,
-            SKUTextBox.Text
-        )
+        ProductNameTextBox.Text,
+        Convert.ToInt32(MinQuantityTextBox.Text),
+        Convert.ToInt32(QuantityTextBox.Text),
+        ArrivalDateDateTimePicker.Value,
+        StatusTextBox.Text,
+        SKUTextBox.Text
+    )
 
-        ' Confirm that rows were updated in the Access database
+        ' Check if the update was successful
         If rowsAffected > 0 Then
-            MessageBox.Show("Update Successful")
-            ' Reload data to show the update in DataGrid
-            Me.OrderProductTableAdapter.Fill(Me.KSJMartInventorySystemDataSet.OrderProduct)
+            Dim customMessageBox As New CustomMessageBox("Update Successful", "Success")
+            customMessageBox.ShowDialog()
+
+            ' Update the status of the specific item
+            UpdateStatus(SKUTextBox.Text)
+
+            ' Save changes to the database using TableAdapter
+            Try
+                Me.Validate() ' Validate the input controls
+                Me.OrderProductBindingSource.EndEdit() ' End editing
+                Me.OrderProductTableAdapter.Update(KSJMartInventorySystemDataSet.OrderProduct)
+                KSJMartInventorySystemDataSet.AcceptChanges() ' Commit the changes
+            Catch ex As Exception
+                Dim customMessageBoxs As New CustomMessageBox("Error saving to database: " & ex.Message, "Error")
+                customMessageBoxs.ShowDialog()
+            End Try
         Else
-            MessageBox.Show("No records updated.")
+            Dim customMessageBox As New CustomMessageBox("No records updated.", "Information")
+            customMessageBox.ShowDialog()
         End If
     End Sub
+
+
+
+
+
+
+
 
     Public Function UpdateQuery(
       ProductName As String,
@@ -98,11 +120,58 @@ Public Class ManageStock
                 End Using
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
+            Dim customMessageBoxs As New CustomMessageBox("Error loading data: " & ex.Message, "Error")
+            customMessageBoxs.ShowDialog()
         End Try
 
         Return rowsAffected  ' Return the affected rows count
     End Function
+
+
+
+    Private Sub OrderProductDataGridView_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles OrderProductDataGridView.CellFormatting
+        ' Check if the current column is DataGridViewTextBoxColumn6 (Status column)
+        If OrderProductDataGridView.Columns(e.ColumnIndex).Name = "DataGridViewTextBoxColumn6" AndAlso e.Value IsNot Nothing Then
+            Dim status As String = e.Value.ToString()
+
+            ' Apply colors based on status value
+            Select Case status
+                Case "In Stock"
+                    e.CellStyle.BackColor = Color.LightGreen
+                    e.CellStyle.ForeColor = Color.Black
+                Case "Low Stock"
+                    e.CellStyle.BackColor = Color.Yellow
+                    e.CellStyle.ForeColor = Color.Black
+                Case "No Stock"
+                    e.CellStyle.BackColor = Color.LightCoral
+                    e.CellStyle.ForeColor = Color.Black
+                Case Else
+                    e.CellStyle.BackColor = Color.White
+                    e.CellStyle.ForeColor = Color.Black
+            End Select
+        End If
+    End Sub
+
+    Private Sub UpdateStatus(updatedSKU As String)
+        For Each row As DataGridViewRow In OrderProductDataGridView.Rows
+            If Not row.IsNewRow AndAlso row.Cells("DataGridViewTextBoxColumn1").Value IsNot Nothing AndAlso row.Cells("DataGridViewTextBoxColumn1").Value.ToString() = updatedSKU Then
+                Dim quantity As Integer = Convert.ToInt32(row.Cells("DataGridViewTextBoxColumn4").Value)
+                Dim minQuantity As Integer = Convert.ToInt32(row.Cells("DataGridViewTextBoxColumn3").Value)
+
+                ' Correct logic to determine the status based on quantity and min quantity
+                If quantity = 0 Then
+                    row.Cells("DataGridViewTextBoxColumn6").Value = "No Stock"
+                ElseIf quantity < minQuantity Then
+                    row.Cells("DataGridViewTextBoxColumn6").Value = "Low Stock"
+                Else
+                    row.Cells("DataGridViewTextBoxColumn6").Value = "In Stock"
+                End If
+                Exit For ' Exit loop after finding the updated row
+            End If
+        Next
+    End Sub
+
+
 
 
 End Class
