@@ -43,10 +43,22 @@ Public Class ManageProducts
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim addDialog As New Dialog1()
         addDialog.DataGridViewReference = AddProductDataGridView ' Pass reference here
+
+        ' Check if the dialog was successful
         If addDialog.ShowDialog() = DialogResult.OK Then
-            LoadProducts() ' Refresh DataGridView in case new data was added
+            ' Refresh the DataGridView in ManageProducts
+            LoadProducts()
+
+            ' Now check if ManageStock is open and refresh its data
+            If Application.OpenForms().OfType(Of ManageStock)().Any() Then
+                Dim manageStockForm As ManageStock = Application.OpenForms().OfType(Of ManageStock)().First()
+
+            End If
         End If
     End Sub
+
+
+
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Hide()

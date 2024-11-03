@@ -60,7 +60,8 @@ Partial Class AboutMart
         Me.TableLayoutPanel.Controls.Add(Me.LabelCopyright, 1, 2)
         Me.TableLayoutPanel.Controls.Add(Me.OKButton, 1, 5)
         Me.TableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel.Location = New System.Drawing.Point(9, 9)
+        Me.TableLayoutPanel.Location = New System.Drawing.Point(12, 11)
+        Me.TableLayoutPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TableLayoutPanel.Name = "TableLayoutPanel"
         Me.TableLayoutPanel.RowCount = 6
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
@@ -69,7 +70,7 @@ Partial Class AboutMart
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel.Size = New System.Drawing.Size(672, 329)
+        Me.TableLayoutPanel.Size = New System.Drawing.Size(896, 405)
         Me.TableLayoutPanel.TabIndex = 0
         '
         'TextBoxDescription
@@ -79,13 +80,13 @@ Partial Class AboutMart
         Me.TextBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBoxDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxDescription.ForeColor = System.Drawing.Color.Maroon
-        Me.TextBoxDescription.Location = New System.Drawing.Point(227, 131)
-        Me.TextBoxDescription.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
+        Me.TextBoxDescription.Location = New System.Drawing.Point(303, 164)
+        Me.TextBoxDescription.Margin = New System.Windows.Forms.Padding(8, 4, 4, 4)
         Me.TextBoxDescription.Multiline = True
         Me.TextBoxDescription.Name = "TextBoxDescription"
         Me.TextBoxDescription.ReadOnly = True
         Me.TextBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBoxDescription.Size = New System.Drawing.Size(442, 158)
+        Me.TextBoxDescription.Size = New System.Drawing.Size(589, 194)
         Me.TextBoxDescription.TabIndex = 0
         Me.TextBoxDescription.TabStop = False
         '
@@ -93,11 +94,11 @@ Partial Class AboutMart
         '
         Me.LabelCompanyName.BackColor = System.Drawing.Color.Transparent
         Me.LabelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelCompanyName.Location = New System.Drawing.Point(227, 96)
-        Me.LabelCompanyName.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
-        Me.LabelCompanyName.MaximumSize = New System.Drawing.Size(0, 17)
+        Me.LabelCompanyName.Location = New System.Drawing.Point(303, 120)
+        Me.LabelCompanyName.Margin = New System.Windows.Forms.Padding(8, 0, 4, 0)
+        Me.LabelCompanyName.MaximumSize = New System.Drawing.Size(0, 21)
         Me.LabelCompanyName.Name = "LabelCompanyName"
-        Me.LabelCompanyName.Size = New System.Drawing.Size(442, 17)
+        Me.LabelCompanyName.Size = New System.Drawing.Size(589, 21)
         Me.LabelCompanyName.TabIndex = 0
         Me.LabelCompanyName.Text = "UTM Sdn Bhd"
         Me.LabelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -106,10 +107,11 @@ Partial Class AboutMart
         '
         Me.LogoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), System.Drawing.Image)
-        Me.LogoPictureBox.Location = New System.Drawing.Point(3, 3)
+        Me.LogoPictureBox.Location = New System.Drawing.Point(4, 4)
+        Me.LogoPictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LogoPictureBox.Name = "LogoPictureBox"
         Me.TableLayoutPanel.SetRowSpan(Me.LogoPictureBox, 6)
-        Me.LogoPictureBox.Size = New System.Drawing.Size(215, 323)
+        Me.LogoPictureBox.Size = New System.Drawing.Size(287, 397)
         Me.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.LogoPictureBox.TabIndex = 0
         Me.LogoPictureBox.TabStop = False
@@ -117,11 +119,11 @@ Partial Class AboutMart
         'LabelProductName
         '
         Me.LabelProductName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelProductName.Location = New System.Drawing.Point(227, 0)
-        Me.LabelProductName.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
-        Me.LabelProductName.MaximumSize = New System.Drawing.Size(0, 17)
+        Me.LabelProductName.Location = New System.Drawing.Point(303, 0)
+        Me.LabelProductName.Margin = New System.Windows.Forms.Padding(8, 0, 4, 0)
+        Me.LabelProductName.MaximumSize = New System.Drawing.Size(0, 21)
         Me.LabelProductName.Name = "LabelProductName"
-        Me.LabelProductName.Size = New System.Drawing.Size(442, 17)
+        Me.LabelProductName.Size = New System.Drawing.Size(589, 21)
         Me.LabelProductName.TabIndex = 0
         Me.LabelProductName.Text = "Kolej Siswa Jaya Mart Inventory Management System"
         Me.LabelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -129,11 +131,11 @@ Partial Class AboutMart
         'LabelVersion
         '
         Me.LabelVersion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelVersion.Location = New System.Drawing.Point(227, 32)
-        Me.LabelVersion.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
-        Me.LabelVersion.MaximumSize = New System.Drawing.Size(0, 17)
+        Me.LabelVersion.Location = New System.Drawing.Point(303, 40)
+        Me.LabelVersion.Margin = New System.Windows.Forms.Padding(8, 0, 4, 0)
+        Me.LabelVersion.MaximumSize = New System.Drawing.Size(0, 21)
         Me.LabelVersion.Name = "LabelVersion"
-        Me.LabelVersion.Size = New System.Drawing.Size(442, 17)
+        Me.LabelVersion.Size = New System.Drawing.Size(589, 21)
         Me.LabelVersion.TabIndex = 0
         Me.LabelVersion.Text = "Version 1.0.0"
         Me.LabelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -141,11 +143,11 @@ Partial Class AboutMart
         'LabelCopyright
         '
         Me.LabelCopyright.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelCopyright.Location = New System.Drawing.Point(227, 64)
-        Me.LabelCopyright.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
-        Me.LabelCopyright.MaximumSize = New System.Drawing.Size(0, 17)
+        Me.LabelCopyright.Location = New System.Drawing.Point(303, 80)
+        Me.LabelCopyright.Margin = New System.Windows.Forms.Padding(8, 0, 4, 0)
+        Me.LabelCopyright.MaximumSize = New System.Drawing.Size(0, 21)
         Me.LabelCopyright.Name = "LabelCopyright"
-        Me.LabelCopyright.Size = New System.Drawing.Size(442, 17)
+        Me.LabelCopyright.Size = New System.Drawing.Size(589, 21)
         Me.LabelCopyright.TabIndex = 0
         Me.LabelCopyright.Text = "Copyright"
         Me.LabelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -157,29 +159,31 @@ Partial Class AboutMart
         Me.OKButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.OKButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.OKButton.ForeColor = System.Drawing.Color.Maroon
-        Me.OKButton.Location = New System.Drawing.Point(594, 303)
+        Me.OKButton.Location = New System.Drawing.Point(792, 373)
+        Me.OKButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.OKButton.Name = "OKButton"
-        Me.OKButton.Size = New System.Drawing.Size(75, 23)
+        Me.OKButton.Size = New System.Drawing.Size(100, 28)
         Me.OKButton.TabIndex = 0
         Me.OKButton.Text = "&OK"
         Me.OKButton.UseVisualStyleBackColor = False
         '
         'AboutMart
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Wheat
         Me.CancelButton = Me.OKButton
-        Me.ClientSize = New System.Drawing.Size(690, 347)
+        Me.ClientSize = New System.Drawing.Size(920, 427)
         Me.Controls.Add(Me.TableLayoutPanel)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.ForeColor = System.Drawing.Color.Maroon
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "AboutMart"
-        Me.Padding = New System.Windows.Forms.Padding(9)
+        Me.Padding = New System.Windows.Forms.Padding(12, 11, 12, 11)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = resources.GetString("$this.Text")

@@ -54,10 +54,15 @@ Public Class Dialog1
                     command.ExecuteNonQuery()
                 End Using
 
-                Dim queryOrderProduct As String = "INSERT INTO OrderProduct (SKU, ProductName) VALUES (?, ?)"
+                Dim queryOrderProduct As String = "INSERT INTO OrderProduct (SKU, ProductName, MinQuantity, Quantity, ArrivalDate, Status) VALUES (?, ?, ?, ?, ?, ?)"
                 Using command As New OleDbCommand(queryOrderProduct, connection)
                     command.Parameters.AddWithValue("@SKU", SKUTextBox.Text)
                     command.Parameters.AddWithValue("@ProductName", ProductNameTextBox.Text)
+                    command.Parameters.AddWithValue("@MinQuantity", 0) ' Replace with appropriate control
+                    command.Parameters.AddWithValue("@Quantity", 0) ' Replace with appropriate control
+                    command.Parameters.AddWithValue("@ArrivalDate", 0)
+                    command.Parameters.AddWithValue("@Status", "No Stock")
+
                     command.ExecuteNonQuery()
                 End Using
 

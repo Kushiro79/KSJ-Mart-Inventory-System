@@ -49,8 +49,9 @@ Partial Class HomePage
         Me.Label1.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Maroon
         Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(800, 50)
+        Me.Label1.Size = New System.Drawing.Size(1067, 61)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "KSJ Mart Inventory Management System"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -65,10 +66,11 @@ Partial Class HomePage
         Me.ManageStockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ManageStockButton.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ManageStockButton.ForeColor = System.Drawing.Color.DarkGreen
-        Me.ManageStockButton.Location = New System.Drawing.Point(84, 150)
+        Me.ManageStockButton.Location = New System.Drawing.Point(112, 185)
+        Me.ManageStockButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ManageStockButton.Name = "ManageStockButton"
-        Me.ManageStockButton.Padding = New System.Windows.Forms.Padding(0, 0, 0, 25)
-        Me.ManageStockButton.Size = New System.Drawing.Size(285, 172)
+        Me.ManageStockButton.Padding = New System.Windows.Forms.Padding(0, 0, 0, 31)
+        Me.ManageStockButton.Size = New System.Drawing.Size(380, 212)
         Me.ManageStockButton.TabIndex = 1
         Me.ManageStockButton.Text = "Manage Stock"
         Me.ManageStockButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -84,10 +86,11 @@ Partial Class HomePage
         Me.ManageProductsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ManageProductsButton.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ManageProductsButton.ForeColor = System.Drawing.Color.Maroon
-        Me.ManageProductsButton.Location = New System.Drawing.Point(446, 150)
+        Me.ManageProductsButton.Location = New System.Drawing.Point(595, 185)
+        Me.ManageProductsButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ManageProductsButton.Name = "ManageProductsButton"
-        Me.ManageProductsButton.Padding = New System.Windows.Forms.Padding(0, 0, 0, 25)
-        Me.ManageProductsButton.Size = New System.Drawing.Size(285, 172)
+        Me.ManageProductsButton.Padding = New System.Windows.Forms.Padding(0, 0, 0, 31)
+        Me.ManageProductsButton.Size = New System.Drawing.Size(380, 212)
         Me.ManageProductsButton.TabIndex = 2
         Me.ManageProductsButton.Text = "Manage Products"
         Me.ManageProductsButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -100,9 +103,10 @@ Partial Class HomePage
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ManageStockPicture.BackColor = System.Drawing.Color.Honeydew
         Me.ManageStockPicture.Image = CType(resources.GetObject("ManageStockPicture.Image"), System.Drawing.Image)
-        Me.ManageStockPicture.Location = New System.Drawing.Point(172, 179)
+        Me.ManageStockPicture.Location = New System.Drawing.Point(229, 220)
+        Me.ManageStockPicture.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ManageStockPicture.Name = "ManageStockPicture"
-        Me.ManageStockPicture.Size = New System.Drawing.Size(106, 77)
+        Me.ManageStockPicture.Size = New System.Drawing.Size(141, 95)
         Me.ManageStockPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.ManageStockPicture.TabIndex = 3
         Me.ManageStockPicture.TabStop = False
@@ -114,9 +118,10 @@ Partial Class HomePage
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ManageProductPicture.BackColor = System.Drawing.Color.MistyRose
         Me.ManageProductPicture.Image = CType(resources.GetObject("ManageProductPicture.Image"), System.Drawing.Image)
-        Me.ManageProductPicture.Location = New System.Drawing.Point(538, 191)
+        Me.ManageProductPicture.Location = New System.Drawing.Point(717, 235)
+        Me.ManageProductPicture.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ManageProductPicture.Name = "ManageProductPicture"
-        Me.ManageProductPicture.Size = New System.Drawing.Size(94, 65)
+        Me.ManageProductPicture.Size = New System.Drawing.Size(125, 80)
         Me.ManageProductPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.ManageProductPicture.TabIndex = 4
         Me.ManageProductPicture.TabStop = False
@@ -127,9 +132,10 @@ Partial Class HomePage
         Me.PictureBox3.BackColor = System.Drawing.Color.Orange
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(761, 10)
+        Me.PictureBox3.Location = New System.Drawing.Point(1015, 12)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(25, 30)
+        Me.PictureBox3.Size = New System.Drawing.Size(33, 37)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 5
         Me.PictureBox3.TabStop = False
@@ -145,22 +151,24 @@ Partial Class HomePage
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 373)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 459)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(800, 77)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1067, 95)
         Me.TableLayoutPanel1.TabIndex = 6
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 0)
+        Me.Label2.Location = New System.Drawing.Point(4, 0)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(103, 25)
+        Me.Label2.Size = New System.Drawing.Size(129, 32)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Contact Us"
         '
@@ -170,9 +178,10 @@ Partial Class HomePage
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.LinkColor = System.Drawing.Color.Black
-        Me.LinkLabel1.Location = New System.Drawing.Point(403, 38)
+        Me.LinkLabel1.Location = New System.Drawing.Point(537, 47)
+        Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(39, 13)
+        Me.LinkLabel1.Size = New System.Drawing.Size(47, 19)
         Me.LinkLabel1.TabIndex = 3
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "About"
@@ -181,18 +190,20 @@ Partial Class HomePage
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 38)
+        Me.Label4.Location = New System.Drawing.Point(4, 47)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(165, 13)
+        Me.Label4.Size = New System.Drawing.Size(198, 16)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Phone Number : +6012-333-4545"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 57)
+        Me.Label3.Location = New System.Drawing.Point(4, 70)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(191, 13)
+        Me.Label3.Size = New System.Drawing.Size(240, 16)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Email : InventorySystem@vbddwd.com"
         '
@@ -202,19 +213,20 @@ Partial Class HomePage
         Me.Label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label5.Font = New System.Drawing.Font("Leelawadee UI", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Maroon
-        Me.Label5.Location = New System.Drawing.Point(0, 50)
+        Me.Label5.Location = New System.Drawing.Point(0, 61)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(800, 97)
+        Me.Label5.Size = New System.Drawing.Size(1067, 119)
         Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Welcome Back [User]!"
+        Me.Label5.Text = "Welcome Back !"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'HomePage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Wheat
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.PictureBox3)
@@ -224,6 +236,7 @@ Partial Class HomePage
         Me.Controls.Add(Me.ManageStockButton)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "HomePage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Home"

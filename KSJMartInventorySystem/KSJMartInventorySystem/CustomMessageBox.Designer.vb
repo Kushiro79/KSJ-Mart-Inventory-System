@@ -38,7 +38,7 @@ Partial Class CustomMessageBox
         '
         'btnOK
         '
-        Me.btnOK.Location = New System.Drawing.Point(118, 236)
+        Me.btnOK.Location = New System.Drawing.Point(176, 230)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(75, 23)
         Me.btnOK.TabIndex = 1

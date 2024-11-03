@@ -8,13 +8,11 @@ Public Class ManageStock
     Dim command As String
 
     Private Sub ManageStock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'KSJMartInventorySystemDataSet.OrderProduct' table. You can move, or remove it, as needed.
-        Me.OrderProductTableAdapter.Fill(KSJMartInventorySystemDataSet.OrderProduct)
+        Me.OrderProductTableAdapter.Fill(Me.KSJMartInventorySystemDataSet.OrderProduct)
+        RefreshOrderProductDataGridView()
         AddHandler OrderProductDataGridView.CellFormatting, AddressOf OrderProductDataGridView_CellFormatting
 
     End Sub
-
-
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Me.Hide()
@@ -27,8 +25,6 @@ Public Class ManageStock
         HomePage.Show()
 
     End Sub
-
-
 
     Private Sub NextButton_Click(sender As Object, e As EventArgs) Handles NextButton.Click
         OrderProductBindingSource.MoveNext()
@@ -49,13 +45,16 @@ Public Class ManageStock
             Return
         End If
 
-        ' Call the UpdateQuery method to update the database
+        ' Update the status and reflect it in the StatusTextBox
+        UpdateStatus(SKUTextBox.Text)
+
+        ' Now, call the UpdateQuery method to update the database with the updated status
         Dim rowsAffected As Integer = UpdateQuery(
         ProductNameTextBox.Text,
         Convert.ToInt32(MinQuantityTextBox.Text),
         Convert.ToInt32(QuantityTextBox.Text),
         ArrivalDateDateTimePicker.Value,
-        StatusTextBox.Text,
+        StatusTextBox.Text, ' Use the updated StatusTextBox value
         SKUTextBox.Text
     )
 
@@ -63,9 +62,6 @@ Public Class ManageStock
         If rowsAffected > 0 Then
             Dim customMessageBox As New CustomMessageBox("Update Successful", "Success")
             customMessageBox.ShowDialog()
-
-            ' Update the status of the specific item
-            UpdateStatus(SKUTextBox.Text)
 
             ' Save changes to the database using TableAdapter
             Try
@@ -82,12 +78,6 @@ Public Class ManageStock
             customMessageBox.ShowDialog()
         End If
     End Sub
-
-
-
-
-
-
 
 
     Public Function UpdateQuery(
@@ -157,19 +147,52 @@ Public Class ManageStock
             If Not row.IsNewRow AndAlso row.Cells("DataGridViewTextBoxColumn1").Value IsNot Nothing AndAlso row.Cells("DataGridViewTextBoxColumn1").Value.ToString() = updatedSKU Then
                 Dim quantity As Integer = Convert.ToInt32(row.Cells("DataGridViewTextBoxColumn4").Value)
                 Dim minQuantity As Integer = Convert.ToInt32(row.Cells("DataGridViewTextBoxColumn3").Value)
+                Dim newStatus As String
 
-                ' Correct logic to determine the status based on quantity and min quantity
+                ' Determine the new status based on quantity and min quantity
                 If quantity = 0 Then
-                    row.Cells("DataGridViewTextBoxColumn6").Value = "No Stock"
+                    newStatus = "No Stock"
                 ElseIf quantity < minQuantity Then
-                    row.Cells("DataGridViewTextBoxColumn6").Value = "Low Stock"
+                    newStatus = "Low Stock"
                 Else
-                    row.Cells("DataGridViewTextBoxColumn6").Value = "In Stock"
+                    newStatus = "In Stock"
                 End If
+
+                ' Update the DataGridView and StatusTextBox with the new status
+                row.Cells("DataGridViewTextBoxColumn6").Value = newStatus
+                StatusTextBox.Text = newStatus
                 Exit For ' Exit loop after finding the updated row
             End If
         Next
     End Sub
+
+
+    Public Sub RefreshOrderProductDataGridView()
+        Try
+            Using connection As New OleDbConnection(connectionString)
+                connection.Open()
+
+                ' Fetch all necessary columns from OrderProduct
+                Dim query As String = "SELECT SKU, ProductName, MinQuantity, Quantity, ArrivalDate, Status FROM OrderProduct"
+                Dim adapter As New OleDbDataAdapter(query, connection)
+                Dim dt As New DataTable()
+                adapter.Fill(dt)
+
+                ' Set the DataTable as the data source for the DataGridView
+                OrderProductDataGridView.DataSource = dt
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
+
+
+
+
+
+
+
+
 
 
 
