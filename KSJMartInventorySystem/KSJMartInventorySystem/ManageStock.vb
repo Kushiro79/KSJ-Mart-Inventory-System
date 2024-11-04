@@ -8,8 +8,9 @@ Public Class ManageStock
     Dim command As String
 
     Private Sub ManageStock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Me.OrderProductTableAdapter.Fill(Me.KSJMartInventorySystemDataSet.OrderProduct)
-        RefreshOrderProductDataGridView()
+
         AddHandler OrderProductDataGridView.CellFormatting, AddressOf OrderProductDataGridView_CellFormatting
 
     End Sub
@@ -186,15 +187,47 @@ Public Class ManageStock
         End Try
     End Sub
 
+    Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
+        ' Check if a row is selected in the DataGridView
+        If OrderProductDataGridView.SelectedRows.Count > 0 Then
+            ' Retrieve the SKU and ProductName of the selected row for deletion
+            Dim selectedSKU As String = OrderProductDataGridView.SelectedRows(0).Cells("DataGridViewTextBoxColumn1").Value.ToString()
+            Dim selectedProductName As String = OrderProductDataGridView.SelectedRows(0).Cells("DataGridViewTextBoxColumn2").Value.ToString()
 
+            ' Confirm deletion with the user
+            Dim confirmationResult As DialogResult = MessageBox.Show("Are you sure you want to delete this item from both tables?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
+            If confirmationResult = DialogResult.Yes Then
+                Try
+                    Using connection As New OleDbConnection(connectionString)
+                        connection.Open()
 
+                        ' Delete from OrderProduct table
+                        Dim deleteOrderProductCommand As String = "DELETE FROM OrderProduct WHERE SKU = ?"
+                        Using command As New OleDbCommand(deleteOrderProductCommand, connection)
+                            command.Parameters.AddWithValue("@SKU", selectedSKU)
+                            command.ExecuteNonQuery()
+                        End Using
 
+                        ' Delete from AddProduct table
+                        Dim deleteAddProductCommand As String = "DELETE FROM AddProduct WHERE SKU = ? AND ProductName = ?"
+                        Using command As New OleDbCommand(deleteAddProductCommand, connection)
+                            command.Parameters.AddWithValue("@SKU", selectedSKU)
+                            command.Parameters.AddWithValue("@ProductName", selectedProductName)
+                            command.ExecuteNonQuery()
+                        End Using
 
-
-
-
-
+                        MessageBox.Show("Record deleted successfully from both tables.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        RefreshOrderProductDataGridView() ' Refresh the DataGridView after deletion
+                    End Using
+                Catch ex As Exception
+                    MessageBox.Show("Error deleting record: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+            End If
+        Else
+            MessageBox.Show("Please select a row to delete.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+    End Sub
 
 
 End Class

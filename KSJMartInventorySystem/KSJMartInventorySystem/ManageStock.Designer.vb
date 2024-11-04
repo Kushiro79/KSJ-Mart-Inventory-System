@@ -56,6 +56,7 @@ Partial Class ManageStock
         Me.QuantityTextBox = New System.Windows.Forms.TextBox()
         Me.ArrivalDateDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.StatusTextBox = New System.Windows.Forms.TextBox()
+        Me.DeleteButton = New System.Windows.Forms.Button()
         SKULabel = New System.Windows.Forms.Label()
         ProductNameLabel = New System.Windows.Forms.Label()
         MinQuantityLabel = New System.Windows.Forms.Label()
@@ -213,7 +214,7 @@ Partial Class ManageStock
         Me.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.NextButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NextButton.ForeColor = System.Drawing.Color.Maroon
-        Me.NextButton.Location = New System.Drawing.Point(1117, 336)
+        Me.NextButton.Location = New System.Drawing.Point(1059, 347)
         Me.NextButton.Margin = New System.Windows.Forms.Padding(4)
         Me.NextButton.Name = "NextButton"
         Me.NextButton.Size = New System.Drawing.Size(100, 28)
@@ -227,7 +228,7 @@ Partial Class ManageStock
         Me.PreviousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PreviousButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PreviousButton.ForeColor = System.Drawing.Color.Maroon
-        Me.PreviousButton.Location = New System.Drawing.Point(1009, 336)
+        Me.PreviousButton.Location = New System.Drawing.Point(951, 347)
         Me.PreviousButton.Margin = New System.Windows.Forms.Padding(4)
         Me.PreviousButton.Name = "PreviousButton"
         Me.PreviousButton.Size = New System.Drawing.Size(100, 28)
@@ -241,7 +242,7 @@ Partial Class ManageStock
         Me.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SaveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SaveButton.ForeColor = System.Drawing.Color.Maroon
-        Me.SaveButton.Location = New System.Drawing.Point(1225, 336)
+        Me.SaveButton.Location = New System.Drawing.Point(1167, 347)
         Me.SaveButton.Margin = New System.Windows.Forms.Padding(4)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(100, 28)
@@ -263,6 +264,7 @@ Partial Class ManageStock
         'OrderProductDataGridView
         '
         Me.OrderProductDataGridView.AutoGenerateColumns = False
+        Me.OrderProductDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.OrderProductDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.OrderProductDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.OrderProductDataGridView.DataSource = Me.OrderProductBindingSource
@@ -279,7 +281,6 @@ Partial Class ManageStock
         Me.DataGridViewTextBoxColumn1.HeaderText = "SKU"
         Me.DataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Width = 125
         '
         'DataGridViewTextBoxColumn2
         '
@@ -287,7 +288,6 @@ Partial Class ManageStock
         Me.DataGridViewTextBoxColumn2.HeaderText = "ProductName"
         Me.DataGridViewTextBoxColumn2.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 125
         '
         'DataGridViewTextBoxColumn3
         '
@@ -295,7 +295,6 @@ Partial Class ManageStock
         Me.DataGridViewTextBoxColumn3.HeaderText = "MinQuantity"
         Me.DataGridViewTextBoxColumn3.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Width = 125
         '
         'DataGridViewTextBoxColumn4
         '
@@ -303,7 +302,6 @@ Partial Class ManageStock
         Me.DataGridViewTextBoxColumn4.HeaderText = "Quantity"
         Me.DataGridViewTextBoxColumn4.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 125
         '
         'DataGridViewTextBoxColumn5
         '
@@ -311,7 +309,6 @@ Partial Class ManageStock
         Me.DataGridViewTextBoxColumn5.HeaderText = "ArrivalDate"
         Me.DataGridViewTextBoxColumn5.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.Width = 125
         '
         'DataGridViewTextBoxColumn6
         '
@@ -319,7 +316,6 @@ Partial Class ManageStock
         Me.DataGridViewTextBoxColumn6.HeaderText = "Status"
         Me.DataGridViewTextBoxColumn6.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.Width = 125
         '
         'SKUTextBox
         '
@@ -375,12 +371,27 @@ Partial Class ManageStock
         Me.StatusTextBox.Size = New System.Drawing.Size(265, 22)
         Me.StatusTextBox.TabIndex = 52
         '
+        'DeleteButton
+        '
+        Me.DeleteButton.BackColor = System.Drawing.Color.Orange
+        Me.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeleteButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeleteButton.ForeColor = System.Drawing.Color.Maroon
+        Me.DeleteButton.Location = New System.Drawing.Point(1275, 347)
+        Me.DeleteButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.DeleteButton.Name = "DeleteButton"
+        Me.DeleteButton.Size = New System.Drawing.Size(100, 28)
+        Me.DeleteButton.TabIndex = 53
+        Me.DeleteButton.Text = "Delete"
+        Me.DeleteButton.UseVisualStyleBackColor = False
+        '
         'ManageStock
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Wheat
         Me.ClientSize = New System.Drawing.Size(1459, 666)
+        Me.Controls.Add(Me.DeleteButton)
         Me.Controls.Add(SKULabel)
         Me.Controls.Add(Me.SKUTextBox)
         Me.Controls.Add(ProductNameLabel)
@@ -442,4 +453,5 @@ Partial Class ManageStock
     Friend WithEvents QuantityTextBox As TextBox
     Friend WithEvents ArrivalDateDateTimePicker As DateTimePicker
     Friend WithEvents StatusTextBox As TextBox
+    Friend WithEvents DeleteButton As Button
 End Class
